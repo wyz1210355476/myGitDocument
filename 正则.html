@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="jquery-1.8.3.js"></script>
+    <style>
+        .box1{
+            background-color: red;
+            height: 30px;
+            width: 30px;
+        }
+    </style>
+</head>
+<body>
+<ul id="98">
+    <li class="box1" id="test">
+        <p></p>
+    </li>
+    <li class="box2"></li>
+</ul>
+</body>
+<script>
+//    var str = "gf go 12 FJLAJDF";
+//    var reg = /\b(?<=\w+)\b\s+\b\d+\b\s+\b(\w+)\b/;
+//    var result = reg.exec(str);
+
+//    var regResult = reg.exec(str)
+var str = "#id";
+var reg = /^(?:\s*(<[\w\W]+>)[^>]*|#([\w-]+))$/
+//var strResult = str.match(reg);
+var result = reg.exec(str);
+//var repResult = str.replace(reg,",");
+//var splitVal = str.split(" ");
+var testVal = reg.test(str);
+//    console.log(strResult);
+//    console.log(splitVal)
+//    console.log(result)
+var ary = ["we","df","fv"];
+var str = "string"
+var obj1 = {};
+var obj2 = new Object();
+function f(){
+
+}
+
+//    $(function () {
+//        alert("123")
+//    })
+
+    var div = document.createElement("div");
+//    div.setAttribute("className","t");
+    div.innerHTML = "  <link/><table></table><a href='/a'>a</a><input type='checkbox'/>";
+//    console.log(div.getElementsByTagName("*"))
+//    var a = div.getElementsByTagName("a")[0];
+//    a.style.cssText = "top:1px;float:left;opacity:.5";
+//    var input = div.getElementsByTagName("input")[0];
+//input.checked = true;
+////    console.log(/(top)/.exec(a.getAttribute("style")))
+////    console.log(input.cloneNode(true).checked)
+fragment = document.createDocumentFragment();
+//fragment.appendChild( div.lastChild );
+    console.log(fragment);
+//    console.log(fragment.appendChild( div.lastChild ))
+    var body = document.getElementsByTagName("body")[0];
+    body.insertBefore(div,document.getElementsByTagName("ul")[0]);
+    var div = document.createElement("div");
+    console.log(document.getElementsByName("ert"))
+</script>
+</html>
