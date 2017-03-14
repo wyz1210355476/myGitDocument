@@ -73,9 +73,14 @@ fragment = document.createDocumentFragment();
 //    delete obj.find;
 //    console.log(obj.find)
 //    console.log(document.querySelector)
-var identifier = /([\d]*)/;
-var rcombinators =  identifier;
-console.log(rcombinators.exec('9'));
+//var reg = /^((?:\\.|[\w*-]|[^\x00-\xa0])+)/,
+//    str = "wer*-";
+//    console.log(reg.exec(str));
 
+    var     whitespace = "[\\x20\\t\\r\\n\\f]",
+            rcomma = new RegExp( "^" + whitespace + "*," + whitespace + "*");
+
+var reg = /^\[[\x20\t\r\n\f]*((?:\\.|[\w-]|[^\x00-\xa0])+)[\x20\t\r\n\f]*(?:([*^$|!~]?=)[\x20\t\r\n\f]*(?:(['"])((?:\\.|[^\\])*?)\3|((?:\\.|[\w#-]|[^\x00-\xa0])+)|)|)[\x20\t\r\n\f]*\]/
+console.log(reg.exec("[type='checkbox']"))
 </script>
 </html>
