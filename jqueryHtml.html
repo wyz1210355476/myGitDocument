@@ -295,5 +295,14 @@
 //var obj = new f()
 //console.log($("div #id",$("p")))
 console.log($("div ul").find("li"))
+var obj = {
+    show:function(){
+        console.log(this)
+    }
+}
+function f(){
+    console.log(this)
+}
+$.proxy(obj.show,obj)()
 </script>
 </html>
