@@ -1,86 +1,137 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
     <title></title>
-    <script type="text/javascript" src="jquery-1.8.3.js"></script>
-    <style>
-        .box1{
-            background-color: red;
-            height: 30px;
-            width: 30px;
-        }
-    </style>
 </head>
 <body>
-<ul id="98">
-    <li class="box1" id="test">
-        <p></p>
-    </li>
-    <li class="box2"></li>
-</ul>
-</body>
+
+
+<button id="test1">模拟编译原理,点击选中checked</button>
+
+<div id="text">
+    <div class="Aaron">
+        <input type="checkbox" name="readme" />
+        <input type="checkbox" name="ttt" />
+        <input type="checkbox" name="aaa" />
+        <p>Sizzle</p>
+    </div>
+</div>
 <script>
-//    var str = "gf go 12 FJLAJDF";
-//    var reg = /\b(?<=\w+)\b\s+\b\d+\b\s+\b(\w+)\b/;
-//    var result = reg.exec(str);
-
-//    var regResult = reg.exec(str)
-var str = "#id";
-var reg = /^(?:\s*(<[\w\W]+>)[^>]*|#([\w-]+))$/
-//var strResult = str.match(reg);
-var result = reg.exec(str);
-//var repResult = str.replace(reg,",");
-//var splitVal = str.split(" ");
-var testVal = reg.test(str);
-//    console.log(strResult);
-//    console.log(splitVal)
-//    console.log(result)
-var ary = ["we","df","fv"];
-var str = "string"
-var obj1 = {};
-var obj2 = new Object();
-function f(){
-
-}
-
-//    $(function () {
-//        alert("123")
-//    })
-
-    var div = document.createElement("div");
-//    div.setAttribute("className","t");
-    div.innerHTML = "  <link/><table></table><a href='/a'>a</a><input type='checkbox'/>";
-//    console.log(div.getElementsByTagName("*"))
-//    var a = div.getElementsByTagName("a")[0];
-//    a.style.cssText = "top:1px;float:left;opacity:.5";
-//    var input = div.getElementsByTagName("input")[0];
-//input.checked = true;
-////    console.log(/(top)/.exec(a.getAttribute("style")))
-////    console.log(input.cloneNode(true).checked)
-fragment = document.createDocumentFragment();
-//fragment.appendChild( div.lastChild );
-//    console.log(fragment);
-//    console.log(fragment.appendChild( div.lastChild ));
-//    var body = document.getElementsByTagName("body")[0];
-//    body.insertBefore(div,document.getElementsByTagName("ul")[0]);
-//    var div = document.createElement("div");
-//    console.log(document.getElementsByName("ert"))
-//    var obj = {};
-//    obj.find = {};
-//    obj.find.a = 1;
-//    console.log(obj.find.a);
-//    delete obj.find;
-//    console.log(obj.find)
-//    console.log(document.querySelector)
-//var reg = /^((?:\\.|[\w*-]|[^\x00-\xa0])+)/,
-//    str = "wer*-";
-//    console.log(reg.exec(str));
-
-    var     whitespace = "[\\x20\\t\\r\\n\\f]",
-            rcomma = new RegExp( "^" + whitespace + "*," + whitespace + "*");
-
-var reg = /^\[[\x20\t\r\n\f]*((?:\\.|[\w-]|[^\x00-\xa0])+)[\x20\t\r\n\f]*(?:([*^$|!~]?=)[\x20\t\r\n\f]*(?:(['"])((?:\\.|[^\\])*?)\3|((?:\\.|[\w#-]|[^\x00-\xa0])+)|)|)[\x20\t\r\n\f]*\]/
-console.log(reg.exec("[type='checkbox']"))
+    var fn;
+    var m = 20;
 </script>
+
+<!--<script type="text/javascript">-->
+
+    <!--var filter = {-->
+        <!--ATTR: function(name, operator,check) {-->
+            <!--return function(elem) {-->
+                <!--var attr = elem.getAttribute(name)-->
+                <!--if (operator === "=") {-->
+                    <!--if(attr === check){-->
+                        <!--return true-->
+                    <!--}-->
+                <!--}-->
+                <!--return false;-->
+            <!--}-->
+        <!--},-->
+        <!--TAG: function(nodeNameSelector) {-->
+            <!--return function(elem) {-->
+                <!--return elem.nodeName && elem.nodeName.toLowerCase() === nodeNameSelector;-->
+            <!--};-->
+        <!--}-->
+    <!--}-->
+
+    <!--function addCombinator(matcher) {-->
+        <!--return function(elem, context, xml) {-->
+            <!--while ((elem = elem['parentNode'])) {-->
+                <!--if (elem.nodeType === 1) {-->
+                    <!--//找到第一个亲密的节点，立马就用终极匹配器判断这个节点是否符合前面的规则-->
+                    <!--return matcher(elem);-->
+                <!--}-->
+            <!--}-->
+        <!--}-->
+    <!--}-->
+
+
+    <!--function elementMatcher(matchers) {-->
+        <!--return matchers.length > 1 ?-->
+                <!--function(elem, context, xml) {-->
+                    <!--var i = matchers.length;-->
+                    <!--while (i&#45;&#45;) {-->
+                        <!--if (!matchers[i](elem, context, xml)) {-->
+                            <!--return false;-->
+                        <!--}-->
+                    <!--}-->
+                    <!--return true;-->
+                <!--} :-->
+            <!--//单个匹配器的话就返回自己即可-->
+                <!--matchers[0];-->
+    <!--}-->
+
+
+
+    <!--function matcherFromTokens(tokens){-->
+        <!--var len = tokens.length;-->
+        <!--var matcher, matchers = [];-->
+        <!--for (i = 0; i < len; i++) {-->
+            <!--if (tokens[i].type === " ") {-->
+                <!--matchers = [addCombinator(elementMatcher(matchers), matcher)];-->
+            <!--} else {-->
+                <!--matcher = filter[tokens[i].type].apply(null, tokens[i].matches);-->
+                <!--matchers.push(matcher);-->
+            <!--}-->
+        <!--}-->
+        <!--return elementMatcher(matchers);-->
+    <!--}-->
+
+
+    <!--function compile() {-->
+        <!--//种子合集-->
+        <!--var seed = document.querySelectorAll('input')-->
+        <!--//选择器-->
+        <!--var selector = "Aaron [name=ttt]";-->
+        <!--var elementMatchers = [];-->
+        <!--var results = []-->
+        <!--var match = [{-->
+            <!--matches: ["div"],-->
+            <!--type: "TAG",-->
+            <!--value: "Aaron"-->
+        <!--}, {-->
+            <!--type: " ",-->
+            <!--value: " "-->
+        <!--}, {-->
+            <!--matches: ["name", "=", "ttt"],-->
+            <!--type: "ATTR",-->
+            <!--value: "[name=ttt]"-->
+        <!--}]-->
+        <!--elementMatchers.push(matcherFromTokens(match));-->
+        <!--var matcher, elem;-->
+        <!--for (var i = 0; i < seed.length; i++) {-->
+            <!--matcher = elementMatchers[0];-->
+            <!--var elem = seed[i];-->
+            <!--if (matcher(elem)) {-->
+                <!--results.push(elem);-->
+                <!--break;-->
+            <!--}-->
+        <!--}-->
+
+
+        <!--results[0].checked = 'checked'-->
+    <!--}-->
+
+
+    <!--$('#test1').click(function() {-->
+        <!--compile();-->
+    <!--})-->
+
+
+
+
+
+<!--</script>-->
+
+</body>
 </html>
