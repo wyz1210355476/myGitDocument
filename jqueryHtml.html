@@ -18,7 +18,9 @@
 <p>
 <div>
     <ul id="id">
-        <li class="box1" id="demo"></li>
+        <li class="ruoyu" id="demo">
+            <input type="text" name="yongzhi"/>
+        </li>
         <li class="box2"></li>
     </ul>
     <input type="text"/>
@@ -28,19 +30,24 @@
     </div>
     <ul>
         <li></li>
+        <li class="ruoyu">
+            <input type="text" name="yongzhi"/>
+        </li>
     </ul>
 
 </div>
 </p>
 <ul>
-    <li></li>
+    <li class="ruoyu">
+        <input type="text" name="yongzhi"/>
+    </li>
 </ul>
 <form>
     <label>Name:</label>
     <input name="name" />
     <fieldset>
         <!--<label>Newsletter:</label>-->
-        <input name="newsletter" />
+        <input type="text" name="yongzhi"/>
     </fieldset>
 </form>
 <input name="none" />
@@ -296,9 +303,13 @@
 //console.log($("div #id",$("p")))
 
 
+<<<<<<< Updated upstream
 
 
 console.log($("div ul li"));
+=======
+console.log($("div ul>li.ruoyu input[name=yongzhi]"));
+>>>>>>> Stashed changes
 
 </script>
 </html>
