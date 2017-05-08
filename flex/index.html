@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>弹性盒布局</title>
+</head>
+<style>
+    .flex-container {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        /*justify-content:center;*/
+        /*align-items: center;*/
+        align-content:center;
+        background-color: #ccc;
+        height: 200px;
+    }
+
+    .flex-item {
+        width: 200px;
+        height: 50px;
+
+    }
+
+    .flex-item:nth-child(1){
+        background-color: aquamarine;
+    }
+    .flex-item:nth-child(2){
+        background-color: bisque;
+    }
+    .flex-item:nth-child(3){
+        background-color: crimson;
+    }
+    .flex-item:nth-child(4){
+        background-color: aquamarine;
+    }
+    .flex-item:nth-child(5){
+        background-color: bisque;
+    }
+    .flex-item:nth-child(6){
+        background-color: crimson;
+    }
+</style>
+<body>
+<ul class="flex-container">
+    <li class="flex-item"></li>
+    <li class="flex-item"></li>
+    <li class="flex-item"></li>
+    <li class="flex-item"></li>
+    <li class="flex-item"></li>
+    <li class="flex-item"></li>
+</ul>
+
+
+</body>
+</html>

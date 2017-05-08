@@ -22,112 +22,139 @@
 
 <script type="text/javascript">
 
-    var filter = {
-        ATTR: function(name, operator,check) {
-            return function(elem) {
-                var attr = elem.getAttribute(name)
-                if (operator === "=") {
-                    if(attr === check){
-                        return true
-                    }
-                }
-                return false;
-            }
-        },
-        TAG: function(nodeNameSelector) {
-            return function(elem) {
-                return elem.nodeName && elem.nodeName.toLowerCase() === nodeNameSelector;
-            };
+//    var filter = {
+//        ATTR: function(name, operator,check) {
+//            return function(elem) {
+//                var attr = elem.getAttribute(name)
+//                if (operator === "=") {
+//                    if(attr === check){
+//                        return true
+//                    }
+//                }
+//                return false;
+//            }
+//        },
+//        TAG: function(nodeNameSelector) {
+//            return function(elem) {
+//                return elem.nodeName && elem.nodeName.toLowerCase() === nodeNameSelector;
+//            };
+//        }
+//    }
+//
+//    function addCombinator(matcher) {
+//        return function(elem, context, xml) {
+//            while ((elem = elem['parentNode'])) {
+//                if (elem.nodeType === 1) {
+//                    //找到第一个亲密的节点，立马就用终极匹配器判断这个节点是否符合前面的规则
+//                    return matcher(elem);
+//                }
+//            }
+//        }
+//    }
+//
+//
+//    function elementMatcher(matchers) {
+//        return matchers.length > 1 ?
+//                function(elem, context, xml) {
+//                    var i = matchers.length;
+//                    while (i--) {
+//                        if (!matchers[i](elem, context, xml)) {
+//                            return false;
+//                        }
+//                    }
+//                    return true;
+//                } :
+//            //单个匹配器的话就返回自己即可
+//                matchers[0];
+//    }
+//
+//
+//
+//    function matcherFromTokens(tokens){
+//        var len = tokens.length;
+//        var matcher, matchers = [];
+//        for (i = 0; i < len; i++) {
+//            if (tokens[i].type === " ") {
+//                matchers = [addCombinator(elementMatcher(matchers), matcher)];
+//            } else {
+//                matcher = filter[tokens[i].type].apply(null, tokens[i].matches);
+//                matchers.push(matcher);
+//            }
+//        }
+//        return elementMatcher(matchers);
+//    }
+//
+//
+//    function compile() {
+//        //种子合集
+//        var seed = document.querySelectorAll('input')
+//        //选择器
+//        var selector = "Aaron [name=ttt]";
+//        var elementMatchers = [];
+//        var results = []
+//        var match = [{
+//            matches: ["div"],
+//            type: "TAG",
+//            value: "Aaron"
+//        }, {
+//            type: " ",
+//            value: " "
+//        }, {
+//            matches: ["name", "=", "ttt"],
+//            type: "ATTR",
+//            value: "[name=ttt]"
+//        }]
+//        elementMatchers.push(matcherFromTokens(match));
+//        var matcher, elem;
+//        for (var i = 0; i < seed.length; i++) {
+//            matcher = elementMatchers[0];
+//            var elem = seed[i];
+//            if (matcher(elem)) {
+//                results.push(elem);
+//                break;
+//            }
+//        }
+//
+//
+//        results[0].checked = 'checked'
+//    }
+//
+//
+//    $('#test1').click(function() {
+//        compile();
+//    })
+
+//var str = "\\.input",
+//        runescape = /\\([\da-f]{1,6}[\x20\t\r\n\f]?|([\x20\t\r\n\f])|.)/gi,
+//        funescape = function( _, escaped, escapedWhitespace ) {
+//            var high = "0x" + escaped - 0x10000;
+//            // NaN means non-codepoint
+//            // Support: Firefox
+//            // Workaround erroneous numeric interpretation of +"0x"
+//            return high !== high || escapedWhitespace ?
+//                    escaped :
+//                // BMP codepoint
+//                    high < 0 ?
+//                            String.fromCharCode( high + 0x10000 ) :
+//                        // Supplemental Plane codepoint (surrogate pair)
+//                            String.fromCharCode( high >> 10 | 0xD800, high & 0x3FF | 0xDC00 );
+//        };
+//console.log(str.replace( runescape, funescape ));
+
+
+function foo() {
+    var a = 1;
+    function bar(){
+        var b = 2;
+        console.log(a);
+        function bzz(){
+            console.log(b+a)
         }
+        bzz()
     }
-
-    function addCombinator(matcher) {
-        return function(elem, context, xml) {
-            while ((elem = elem['parentNode'])) {
-                if (elem.nodeType === 1) {
-                    //找到第一个亲密的节点，立马就用终极匹配器判断这个节点是否符合前面的规则
-                    return matcher(elem);
-                }
-            }
-        }
-    }
-
-
-    function elementMatcher(matchers) {
-        return matchers.length > 1 ?
-                function(elem, context, xml) {
-                    var i = matchers.length;
-                    while (i--) {
-                        if (!matchers[i](elem, context, xml)) {
-                            return false;
-                        }
-                    }
-                    return true;
-                } :
-            //单个匹配器的话就返回自己即可
-                matchers[0];
-    }
-
-
-
-    function matcherFromTokens(tokens){
-        var len = tokens.length;
-        var matcher, matchers = [];
-        for (i = 0; i < len; i++) {
-            if (tokens[i].type === " ") {
-                matchers = [addCombinator(elementMatcher(matchers), matcher)];
-            } else {
-                matcher = filter[tokens[i].type].apply(null, tokens[i].matches);
-                matchers.push(matcher);
-            }
-        }
-        return elementMatcher(matchers);
-    }
-
-
-    function compile() {
-        //种子合集
-        var seed = document.querySelectorAll('input')
-        //选择器
-        var selector = "Aaron [name=ttt]";
-        var elementMatchers = [];
-        var results = []
-        var match = [{
-            matches: ["div"],
-            type: "TAG",
-            value: "Aaron"
-        }, {
-            type: " ",
-            value: " "
-        }, {
-            matches: ["name", "=", "ttt"],
-            type: "ATTR",
-            value: "[name=ttt]"
-        }]
-        elementMatchers.push(matcherFromTokens(match));
-        var matcher, elem;
-        for (var i = 0; i < seed.length; i++) {
-            matcher = elementMatchers[0];
-            var elem = seed[i];
-            if (matcher(elem)) {
-                results.push(elem);
-                break;
-            }
-        }
-
-
-        results[0].checked = 'checked'
-    }
-
-
-    $('#test1').click(function() {
-        compile();
-    })
-
-
-
-
-
+    bar()
+}
+foo()
 </script>
 
 
