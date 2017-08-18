@@ -25,7 +25,7 @@
     </ul>
     <input type="text"/>
     <p></p>
-    <div class="aaron">
+    <div class="aaron" data-a="2222">
         <input type="checkbox" class="aaron"/>
     </div>
     <ul>
@@ -51,15 +51,250 @@
     </fieldset>
 </form>
 <input name="none" />
+
+<div class="eventBox" style="height: 200px;width: 200px;background-color: #cccccc">
+    <p class="second" style="width: 100px;height: 100px;background-color: antiquewhite">
+        <span class="third" style="width: 50px;height: 50px;background-color: crimson;display: inline-block"></span>
+    </p>
+</div>
 </body>
 <script>
-    for (var i = 0; i < 5; i++) {
-        setTimeout(function() {
-            console.log(new Date, i);
-        }, 1000);
-    }
+//    var a = [];
+//    for (let i = 0; i < 10; i++) {
+//        a[i] = function () {
+//            console.log(i);
+//        };
+//    }
+//    a[6]();
+var dom = $('.ruoyu');
+dom.append('<div><span>text</span></span></div>','<p>two</p>');
+dom.remove();
+//    var oFragment = document.createDocumentFragment();
+//
+//    for(var i = 0;i < 10;i++){
+//        var p = document.createElement('p');
+//        var oText = document.createTextNode('段落'+i);
+//        p.appendChild(oText);
+//        oFragment.appendChild(p);
+//    }
+//
+//    console.log(p.ownerDocument === document);
+//    console.log()
+//    document.body.insertBefore(oFragment.cloneNode(),document.body.getElementsByTagName('input')[0])
+//    var obj = {
+//        add: function (){
+//            var handler = function () {
+//                function f3(){
+//                    function f4(){
+//                        return obj.dispatch(ele)
+//                    }
+//                    f4();
+//                }
+//                f3()
+//            };
+//            var ele = "weiyongzhi";
+//            handler.ele = 'my';
+////            return handler;
+//            document.addEventListener('click',handler,false);
+//        },
+//        dispatch: function (ele) {
+//            alert(ele)
+//        }
+//    };
+//    obj.add();
 
-    console.log(new Date, i);
+//    function f1(){
+//        alert('third self');
+//    }
+//
+//$('.third').on('click', f1);
+//$('.second').on('click', function () {
+//    alert('second self')
+//});
+//$('.second').on('click','.third', function () {
+//    alert('second third')
+//});
+//$('.second').on('click','.thy', function () {
+//    alert('second third')
+//});
+//$('.eventBox').on('click', function () {
+//    alert('eventBox self')
+//});
+//$('.eventBox').on('click','.third', function () {
+//    alert('eventBox third')
+//});
+//    $('.third').trigger('click');
+//    var request = new XMLHttpRequest();
+//    console.log(request);
+//    request.open('get','test.json');
+//    console.log(request);
+//
+//    request.send(null);
+//    request.onreadystatechange = function () {
+//        console.log(request);
+//    };
+//    $('.ruoyu').on('click','input', function () {
+//        alert('222')
+//    });
+//    console.log(Object.prototype.toString.call([]));
+//    $('#id').val('name');
+//    $('#id').val();
+//    $('.aaron').eq(0).attr('name','jack');
+//    $('.aaron').eq(0).attr('name');
+//    $('#id').addClass('layout');
+//    $('.aaron').eq(0).queue(function (hooks) {
+//        alert('1');
+//        hooks()
+//    }).queue(function () {
+//        alert(2)
+//    });
+//    $.queue(document,'q1', function (queue,hooks) {
+//        alert(1);
+//        console.log(hooks.empty.fire());
+//        console.log(queue());
+//    });
+//    $.queue(document,'q1', function () {
+//        alert(2)
+//    });
+//    $.dequeue(document,'q1');
+//    var arron = $('.aaron').eq(0);
+//    $.data(arron,'a','1111');
+//    $.data(arron,'b','2222');
+//    console.log($.data(arron,'a'));
+//    $.removeData(arron,'a');
+//    $('.aaron').data('data-a','1111');
+//    $('.aaron').data('a');
+//    Object.defineProperty( this.cache = {}, 0, {
+//        get: function() {
+//            return {};
+//        }
+//    });
+//    cache['name'] = "1"
+//    console.log(cache)
+//    var dtd = $.Deferred()
+//    function test1(dtd){
+//        var tasks = function(){
+//
+//            alert("1执行完毕！");
+//
+//            dtd.resolve(); // 改变deferred对象的执行状态
+//
+//        };
+//
+//        setTimeout(tasks,2000);
+//
+//        return dtd.promise();
+//    }
+//    function test2(dtd){
+//        var tasks = function(){
+//
+//            alert("2执行完毕！");
+//
+//            dtd.resolve(); // 改变deferred对象的执行状态
+//
+//        };
+//
+//        setTimeout(tasks,5000);
+//
+//        return dtd.promise();
+//    }
+//    $.when($.get('http://localhost:63342/myGitDocument/jqueryHtml.html'), $.get('http://localhost:63342/myGitDocument/jqueryHtml.html')).done(
+//            function(){
+//                alert('success')
+//            },
+//            function () {
+//                alert('fail')
+//            }
+//    )
+    var $Callbacks = $.Callbacks('memory');
+    $Callbacks.add(F);
+
+    $Callbacks.fire()
+    $.each([1,2,3,4,5],function (i,v) {
+        console.log($(this))
+    })
+    console.log([5].concat([[1,2],[2,3],[3,4]]));
+    function F(){
+        this.a = 'jack';
+        return this;
+
+    };
+    F.prototype.a = "rose";
+    var obj1 = new F()
+    console.log(obj1)
+    console.log(document.getElementById("id"))
+    var arys = [1,2,3];
+    tpl = arys || false;
+    console.log(tpl);
+    var defer = $.Deferred();
+
+    var filtered = defer.then(function( value ) {
+        console.log(value);
+        return value * 2;
+    });
+
+    defer.resolve( 5 );
+
+//    filtered.done(function( value ) {
+//        console.log(value) //10
+//    });
+//    console.log(false == 0)
+//    for (var i = 0; i < 5; i++) {
+//        setTimeout(function() {
+//            console.log(new Date, i);
+//        }, 1000);
+//    }
+//
+//    console.log(new Date, i);
+//function Aaron(List, callback) {
+//    setTimeout(function() {
+//        var task = List.shift();
+//        task(); //执行函数
+//        if (List.length > 0) {  //递归分解
+//            setTimeout(arguments.callee, 1000)
+//        } else {
+//            callback()
+//        }
+//    }, 25)
+//}
+//
+//Aaron([function(){
+//    alert('a')
+//},function(){
+//    alert('b')
+//}],function(){
+//    alert('callback')
+//})
+//function foo(){
+//    var fire = function () {
+//                var b = "2"
+//        alert('1')
+//        },
+//    self = {
+//        fire: function () {
+//            fire()
+//        }
+//    }
+//    return self;
+//}
+//function f(x){
+//
+//}
+//var callbacks = $.Callbacks("once memory");
+//
+//callbacks.add(function() {
+//    console.log("f1");
+//});
+//
+//callbacks.fire(); //输出 "f1",这时函数列表已经执行完毕!
+//
+//callbacks.add(function() {
+//    console.log("f2");
+//}); //memory作用在这里，没有fire，一样有结果: f2
+//callbacks.fire();
+//callbacks.fire();
+var tuples = [1,2,3,4,5,6,7,8,9,10]
+console.log( 2 ^ 1 )
 ;(function (window,undefined) {
     var rootjQuery,
         class2type = {},

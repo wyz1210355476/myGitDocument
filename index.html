@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="https://unpkg.com/vue"></script>
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+<table id="app1">
+	<tr is="my-row" :message="msg"></tr>
+</table>
+<div id="app">
+	<p>{{ total }}</p>
+	<button-counter v-on:increment="incrementTotal" v-on:click.native="selfMethod"></button-counter>
+	<button-counter v-on:increment="incrementTotal"></button-counter>
+</div>
+<div id="app2">
+	<validate v-bind:my-Message="num"></validate>
+</div>
+
+<div id="app3">
+	<bs-date-input data-3d-date-picker="true"
+  class="date-picker-theme-dark"></bs-date-input>
+</div>
+
+<!-- 自定义事件 -->
+<div id="app4">
+	<p>{{total}}</p>
+	<button-counter v-on:increment="incrementTotal" v-on:click.native='selfMethod'></button-counter>
+	<button-counter v-on:increment="incrementTotal"></button-counter>
+</div>
+<!-- 修饰符 -->
+<div id="app5">
+	<p>{{bar}}</p>
+	<comp :foo.sync="bar"></comp>
+
+	<!-- 
+		被扩展为：
+		<comp :foo="bar" @update:foo="val => bar = val"></comp>
+	 -->
+</div>
+<script type="text/javascript">
+Vue.component("my-row",{
+	props:["message"],
+	template:"<tr><td>{{message}}</td><td>性别</td></tr>",
+	data:function(){
+		return {
+			msg:"Hello "+this.message
+		}
+	},
+	computed:{
+		normalizedSize:function(){
+			return this.message.split('').reverse().join('-').toLowerCase();
+		}
+	}
+})
+
+new Vue({
+	el:"#app1",
+	data:{
+		msg:"WORLD"
+	}
+})
+
+	Vue.component("button-counter",{
+		template:"<button v-on:click='incrementCounter'>{{counter}}</button>",
+		data:function(){
+			return{
+				counter:0
+			}
+		},
+		methods:{
+			incrementCounter:function(){
+				this.counter += 1;
+				this.$emit('increment')
+			}
+		}
+	})
+
+	new Vue({
+		el:"#app",
+		data:{
+			total:0
+		},
+		methods:{
+			incrementTotal:function(){
+				this.total += 1;
+			},
+			selfMethod:function(){
+				alert("1")
+			}
+		}
+	})
+
+	Vue.component("validate",{
+		props:{
+			myMessage:{
+				type:Number,
+				required:true
+			}
+		},
+		template:"<p>{{myMessage}}</p>"
+	})
+
+	new Vue({
+		el:"#app2",
+		data:{
+			num:12
+		}
+	})
+
+	Vue.component("bs-date-input",{
+		props:['data-3d-date-picker'],
+		template:'<input type="date" class="form-control">',
+		data:function(){
+			return {
+				booleanV:this.picker
+			}
+		},
+		computed:{
+			testCon:function(){
+				console.log(this);
+				return this.picker;
+			}
+		}
+	})
+
+	new Vue({
+		el:"#app3"
+	})
+
+	Vue.component("button-counter",{
+		template:'<button v-on:click="incrementCounter">{{counter}}</button>',
+		data:function(){
+			return {
+				counter:0
+			}
+		},
+		methods:{
+			incrementCounter:function(){
+				this.counter += 1;
+				this.$emit('increment')
+			}
+		}
+	})
+
+	new Vue({
+		el:"#app4",
+		data:{
+			total:0
+		},
+		methods:{
+			incrementTotal:function(){
+				this.total += 1;
+			},
+			selfMethod:function(){
+				alert('self event')
+			}
+		}
+
+	})
+
+	Vue.component("comp",{
+		props:["foo"],
+		template:'<input @input="f" v-model="foo">',
+		methods:{
+			f:function(){
+				this.$emit('update:foo',this.foo)
+			}
+		}
+	})
+
+	new Vue({
+		el:"#app5",
+		data:{
+			bar:"hello world!"
+		}
+	})
+</script>
+</body>
+</html>

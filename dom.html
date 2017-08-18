@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="jquery.js"></script>
+    <style>
+        body{
+            width: 20000px;
+            height: 1000px;
+            background-color: red;
+        }
+        div{
+            height: 100px;
+            width:100px;
+            background-color: #cccccc;
+            overflow: scroll;
+            border: 10px solid red;
+        }
+        .inputBox{
+            /*display: none;*/
+            height: 10px;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+<h1>Dave Matthews vids</h1>
+<p><span id="toggle-all">全选/反选</span></p>
+<ol id="vids">
+    <li><input type="checkbox" checked><a href="http://new.music.yahoo.com/videos/--2158073">Gravedigger</a></li>
+    <li><input type="checkbox" checked><a href="http://new.music.yahoo.com/videos/--4472739">Save Me</a></li>
+    <li><input type="checkbox" checked><a href="http://new.music.yahoo.com/videos/--45286339">Crush</a></li>
+    <li><input type="checkbox" checked><a href="http://new.music.yahoo.com/videos/--2144530">Don't Drink The Water</a></li>
+    <li><input type="checkbox" checked><a href="http://new.music.yahoo.com/videos/--217241800">Funny the Way It Is</a></li>
+    <li><input type="checkbox" checked><a href="http://new.music.yahoo.com/videos/--2144532">What Would You Say</a>
+    </li>
+</ol>
+
+<input type="text" value="123" class="inputBox"/>
+</body>
+<script>
+    function Foo(){
+
+    };
+    var b = new Foo();
+    console.log(Foo.constructor)
+    var dom = document.getElementsByClassName('inputBox')[0];
+    console.log(dom.offsetWidth);
+<!--单例模式-->
+var singleton = (function () {
+    var instantiated;
+
+    function init(){
+//        单例代码
+        return{
+            publicMeth: function () {
+                console.log('Hello World')
+            },
+            publicPropoty:'test'
+        }
+    }
+
+    return{
+//      调用时初始化单例代码
+        getInstance: function () {
+            if(!instantiated){
+                instantiated = init();
+            }
+            return instantiated;
+        }
+    }
+})()
+
+var singletonTester = (function () {
+    function Singleton(args){
+        var args = args || {};
+        this.name = 'singletonTester';
+        this.pointX = args.pointX || 6;
+        this.pointY = args.pointY || 5;
+    }
+
+    var instance;
+
+    var _static = {
+        name:'SingletonTester',
+        getInstance: function (args) {
+            if(instance === undefined){
+                instance = new Singleton(args);
+            };
+            return instance;
+        }
+    };
+    return _static;
+})();
+
+/**
+ * 代理模式
+ * 1.指向对象
+ * 2.代理
+ * 3.委托对象
+ */
+//1.指向对象
+var girl = function (name) {
+    this.name = name;
+};
+//2.委托对象
+var dada = function (girl,name) {
+    this.name = name;
+    this.sendGift = function (gift) {
+        alert("Hi"+girl.name+","+this.name+"送你一个："+gift);
+    }
+};
+//3代理
+var proxyTom = function (girl) {
+    this.girl = girl;
+    this.sendGift = function (gift) {
+        (new dada(girl,"强东")).sendGift(gift);
+    }
+};
+//4.执行
+var proxy = new proxyTom(new girl('奶茶妹妹'));
+proxy.sendGift('奶茶');
+
+
+//    console.log(document.getElementsByTagName('div')[0].scrollWidth);
+//    console.log(document.getElementsByTagName('div')[0].offsetWidth);
+//    console.log(document.getElementsByTagName('div')[0].clientWidth);
+//
+//    console.log(document.documentElement.scrollWidth);
+//    console.log(document.documentElement.offsetWidth);
+//    console.log(document.documentElement.clientWidth);
+//    console.log(document.documentElement.innerWidth);
+////
+//    console.log(document.body.scrollWidth);
+//    console.log(document.body.offsetWidth);
+//    console.log(document.body.clientWidth);
+
+//    console.log($(window).width());
+//    console.log($(document).width())
+//
+//    $('div').width()
+    console.log(window.innerWidth);
+console.log($(window).width())
+//console.log(window.pageXOffset)
+//console.log(window.pageYOffset)
+</script>
+</html>
