@@ -139,6 +139,8 @@
 
     // 正则表达式
     var str = 'w ab dsd ab jlkjab abjlkj ab jklj cd ';
+    console.log('w ab dsd ab jlkjab abjlkj ab jklj cd ')
+    console.log('/\\ba(b)\\b|(cd)/g')
     // 全局匹配
     var reg = /\ba(b)\b|(cd)/g;
     console.log(str.match(reg));
