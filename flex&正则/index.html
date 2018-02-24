@@ -193,6 +193,10 @@
         return letter.toUpperCase()
     }));
     console.log(Date.now())
+
+    var reg = /^(<a)[\s\S]*(class=(\"|\')u-title(\"|\'))([\s\S]*)>([\s\S]*)(<\/a>)$/;
+    var str = '<a class="u-title" onclick="javascript:_reportData(\'56616\',\'钢铁侠3\',\'1\')" href="//www.mgtv.com/b/56616/750962.html" target="_blank">钢铁侠3</a>';
+    console.log(reg.test(str))
 </script>
 </body>
 </html>
