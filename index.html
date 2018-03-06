@@ -112,7 +112,7 @@
 <!-- 作用域插槽 -->
 <template id="tem3">
 	<div class="child">
-	  <slot text="hello from child"></slot>
+	  <slot texts="hello from"></slot>
 	</div>
 </template>
 <div id="parent">
@@ -120,7 +120,7 @@
 	  <child>
 	    <template scope="props">
 	      <span>hello from parent</span>
-	      <span>{{ props.text }}</span>
+	      <span></span>
 	    </template>
 	  </child>
 	</div>
