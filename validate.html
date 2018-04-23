@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<br>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+        }
+        .box1{
+            width: 900px;
+            height: 900px;
+            background-color: #3081C2;
+            position: relative;
+            left: 200px;
+            top: 200px;
+        }
+        .box2{
+            width: 400px;
+            height: 400px;
+            background-color: #001f3f;
+            color: #fff;
+            /*float: right;*/
+            /*position: absolute;*/
+            /*right: 0px;*/
+        }
+        .box3{
+            width: 100px;
+            height: 100px;
+            background-color: #0055aa;
+            position: relative;
+            left: 50px;
+            top: 50px;
+        }
+    </style>
+</head>
+<body>
+<div class="box1">
+    <div class="box2" id="box2" style="color: #fff">
+        value
+        <div class="box3"></div>
+        <p></p>
+        <p></p>
+    </div>
+</div>
+<div>
+
+    <a href="#title1">标题1</a>
+    <a href="#title2">标题2</a>
+    <a href="#title3">标题3</a>
+
+    <a name="#title1"><h2>滚石唱片公司1</h2></a>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+
+    <!-- -->
+
+    <a name="title2"><h2>滚石唱片公司2</h2></a>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+
+
+    <a name="title3"><h2>滚石唱片公司3</h2></a>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+    <p>滚石唱片公司</p>
+</div>
+<!--<span>1</span><input id="input01" type="text"/></br>-->
+<!--<span>2</span><input id="input02" type="text"/>-->
+</body>
+<!--<script src="js/libs/jquery/jquery-1.9.1.min.js"></script>-->
+<script>
+    var x = document.getElementsByClassName('box2')[0];
+    var y = document.getElementsByClassName('box3')[0];
+    var z = x.getElementsByTagName('p')[1];
+    var TplVal = x.style.color;
+//    var y = x.getElementsByTagName('p');
+//    console.log(y);
+    console.log(TplVal);
+    var parentNode = document.createElement('p');
+    var textNode = document.createTextNode('Hello world!');
+//    parentNode.appendChild(textNode);
+    //    x.insertBefore(parentNode,z);
+    //    console.log(x.firstChild.nodeValue);
+    //    console.log(y.parentNode.replaceChild(parentNode,y))
+//    console.log(x.childNodes[0].nodeValue)
+    var n = 1;
+    function f1(){
+        test = 10;
+        var n = 999;
+        addN = function () {
+            n++;
+        };
+        function f2(){
+            alert(n)
+        };
+        return f2;
+    }
+    var result1 = f1();
+    function bar (x){
+        alert(x);
+//        var x = 2;
+//        alert(x);
+        var x = 2;
+        alert(x)
+//        function x(){
+//
+//        }
+    }
+//    bar(3);   //2
+//function foo(){
+//    alert(x);
+//}
+//    Object.prototype.x = 10;
+//    foo()
+//    function foo() {
+//        alert(x);
+//    }
+//
+//    Object.prototype.x = 10;
+//    var count = 0, timer;
+//    document.onclick = function(){
+//        if(count < 2){
+//            if(timer){
+//                clearTimeout(timer);
+//            }
+//            count ++;
+//            timer = setTimeout(function(){
+//                count = 0;
+//            }, 500);
+//        }else if(count === 2){
+//            count = 0;
+//            clearTimeout(timer);
+//            threeClick();
+//        }
+//    }
+//    function threeClick(){
+//        alert('three click');
+//    }
+//    foo(); // 10
+//    alert(test)
+//    addN();
+//    addN();
+//    result1();
+
+//    function f11(){
+//        var n = 999;
+//        addNn = function () {
+//            n++;
+//            alert(n)
+//        };
+////        alert(n)
+//        return n;
+//    }
+//
+//    var result2 = f11();
+//    addNn()
+//    result2 = f11();
+//    alert(result2)
+//    var name = "The Window";
+//    var object = {
+//        name : "My Object",
+//        getNameFunc : function(){
+//            return this.name;
+//        }
+//    };
+//    var name = object.getNameFunc();
+////    alert(name);
+//    var w = 100;
+//    function f1(){
+//        this.w = 101
+//    };
+//    f1();
+//    alert(w)
+//    var a=function(){
+////empty
+//    }
+//    a.prototype.var1=[1,2,3];
+//    var b=new a();
+//    b.var1.push(4);
+//    var c=new a();
+//    alert(c.var1.join(","))
+//    var module1 = (function (mod){
+//        alert(mod)
+////        mod.m3 = function () {
+////            //...
+////        };
+////        return mod;
+//    })(1);
+//    alert(Boolean(""))
+//    var obj = new Object(11)
+//    alert(obj instanceof Object)
+//    function obj(x){
+//        this.name = "jack";
+//        return x;
+//    }
+//    var f = new obj(3);
+//    console.log(f);
+//    console.log(obj(3));
+
+//    var val1 = "" || false || 1;
+//    alert(val1);
+//    var val2 = "123"&& null && "";
+//    alert(val2)
+//    alert(NaN+"string");
+//   alert(typeof Number("3"));
+//    var number = 0;
+    var count = 0 ;
+    var timer;
+    document.onclick = function () {
+        if(count < 2){
+            if(timer){
+                clearTimeout(timer);
+            };
+            count++;
+            timer = setTimeout(function () {
+                count = 0;
+            },200);
+        }else if(count == 2){
+            count = 0;
+            clearTimeout(timer);
+            alert("three click")
+        }
+    };
+    var xhr = new XMLHttpRequest();
+    x.addEventListener("click", function (event) {
+        xhr.open("get","test.json",true);
+        xhr.send(null);
+        if(xhr.status >= 200 && xhr.status < 300 || xhr.status == 304){
+            alert(xhr.responseText)
+        }else{
+            alert("Request was unsuccessful:"+xhr.statusText);
+        }
+//        number++;
+//        alert(number)
+//        localStorage.test = number;
+//        alert(localStorage.userName)
+    });
+    y.addEventListener("click", function () {
+//        var name = prompt("what is your name?");
+//        localStorage.userName = name;
+//        event.stopPropagation()
+    })
+</script>
+<script>
+//    $("#input01").blur(function () {
+//        $(this).get(0).focus();
+//    })
+//    $("#input02").focus(function () {
+//        alert("02")
+//    })
+//    var book = {
+//        _year:2004,
+//        edition:1
+//    }
+//   Object.defineProperty(book,"year",{
+//       get: function () {
+//           return this._year;
+//       },
+//       set: function (newValue) {
+//           if(newValue > 2004){
+//               this._year = newValue;
+//               this.edition += newValue - 2014;
+//           }
+//       }
+//   });
+//  function f(str){
+//      var strArray = str.split("");
+//      var reverseStrArray = strArray.reverse();
+//      var newStr = strArray.join(" ")
+//  }
+//function f(str){
+//    return str.split("").reverse().join(" ");
+//}
+//    alert(f("qwert"))
+//    function Person(){
+//
+//    };
+//    Person.prototype = {
+//        constructor:Person,
+//        name:"Nicholas",
+//        age:"29",
+//        job:"Software Engineer",
+//        friends:["Shelby","Court"],
+//        sayName: function () {
+//            alert(this.name)
+//        }
+//    }
+//
+//    var person1 = new Person();
+//    var person2 = new Person();
+
+//    person1.friends = ["Jonh","Tom"];
+//    alert(person2.friends);
+//    alert(person1.friends)
+//    person1.friends.push("Tom")
+//    alert(person2.friends);
+//    alert(person1.friends)
+//    var scope = "global scope";//全局变量
+//    function checkscope(){
+//        var scope = "local scope";
+//        function f(){
+//            return scope;
+//        }
+//        return f;
+//    }
+//    alert(checkscope());
+//function a(){
+//    var i = 0;
+//    function b(){
+//        alert(++i);
+//    }
+//    return b;
+//}
+//var c = a();
+//c();
+//c();
+//var d = a();
+//d();
+
+//var name = "The Window";
+//
+//var object = {
+//    name : "My Object",
+//    getNameFunc : function(){
+//        var that = this;
+//        return function(){
+//            return that.name;
+//        };
+//    }
+//
+//};
+//alert(object.getNameFunc()());
+
+//继承
+//var name = "global name";
+//function Person1(name,age,job){
+//    this.name = name;
+//    this.age = age;
+//    this.job = job;
+//}
+//    Person1.prototype.sayName = function () {
+//        alert(this.name);
+//    }
+//function Person2(){
+//    this.name = "jhon";
+//    this.age = "24";
+//    this.job = "doctor";
+//}
+//    Person2.prototype = new Person1("tom");
+//    var people2 = new Person2();
+//    people2.sayName();
+
+//this指向
+//var object = {
+//    name :"Tom",
+//    age : "23",
+//    sayName : function(){
+//        return function () {
+//            alert(this.name)
+//        }
+//    }
+//}
+//object.sayName().call(object)
+var name = "Tom";
+var object = {
+    name : "Jhon",
+    age : "34",
+    sayName : function () {
+        function sayAge(){
+            alert(this.name);
+        }
+//        sayAge.call(object)
+//        this.name = "Jack"
+//        this.sayAge = function () {
+//            alert(this.name)
+//        };
+    }
+};
+object.sayName();
+//var f1 = new object.sayName();
+//f1.call(object)
+//f1.sayAge()
+//object.sayName();//如果嵌套函数作为函数调用，this指向window（非严格模式下）或undefined（严格模式下）
+
+/**
+ * 函数调用
+ * 1.作为函数调用
+ * 2.作为方法调用
+ * 3.作为构造函数调用
+ * 4.通过它们的call()和apply()方法间接调用
+ */
+
+function Person(){
+    this.name = "Tom";
+    this.age = "23";
+    return {
+       name : "jack",
+       age : "26"
+    };
+};
+//var person1 = new Person();
+//var j = '21';
+//function fn(){
+//    var k = "22";
+////    function fn1(){
+////        alert(j);
+////        alert(k);
+////    }
+//
+////    function fn2(){
+////        alert(j);
+////        alert(k);
+////    }
+//    var barFn = Function('alert(j); alert(k);');
+////    fn1();
+//    barFn()
+//}
+//
+//function foo() {
+//    this.add = function (x, y) {
+//        return x + y;
+//    }
+//}
+//
+//foo.prototype.add = function (x, y) {
+//    return x + y + 10;
+//};
+//
+//Object.prototype.subtract = function (x, y) {
+//    return x - y;
+//};
+//
+//var f = new foo();
+//alert(f.add(1, 2)); //结果是3，而不是13
+//alert(f.subtract(1, 2)); //结果是-1
+var mounth = new Date().getMonth()+1;
+var nextMounth = mounth + 1;
+console.log(nextMounth);
+
+//console.log(person1)
+//person1.name = "Jhon";
+//alert(person1.name);
+
+//var person2 = new Person();
+//alert(person2.name)
+//闭包
+//var a = "11"
+//function f(){
+//    var a = "12";
+//    function f1(){
+//        return a;
+//    }
+//    return f1;
+//}
+//
+//var b = (function () {
+//    var a = "12";
+//    function f1(){
+//        return a;
+//    }
+//    return f1;
+//})();
+//alert(value)
+//var value = 1;
+//function value(){
+//    return 1;
+//}
+//alert(value)
+//function b(x, y, a) {
+//    arguments[2] = 10;
+//    alert(a);
+//}
+//b(1, 2);
+//function a() {
+//    alert(this);
+//}
+//a.call(null);
+//function add(x){
+//    return add;
+//}
+//
+//console.log(add(4)(3)(5));
+//var a=111;
+//function A(a){
+//    console.log(a); // a()
+//    function a(){};
+//    console.log(a); // a()
+//// 函数的形参 > 函数声明 >  变量声明
+//}
+//function add(num) {
+//    function _add(args) {
+//        num += args;
+//        return arguments.callee;
+//    }
+//
+//    _add.toString = _add.valueOf = function () {
+//        return num;
+//    };
+//    return _add;
+//}
+//
+//console.log(add(2)(3)(4));
+
+//function add(num){
+//    function _add(args){
+//        num += args;
+//        return _add;
+//    }
+//    _add.toString = _add.valueOf = function () {
+//        return num;
+//    };
+//    return _add;
+//}
+//console.log(add(2))
+(function (value) {
+//    alert(typeof value);
+    var value = 1;
+
+    function value(){
+        return 1;
+    }
+    alert(typeof value);
+})(3)
+//function foo(x,y,z){
+//    alert(arguments[2]);
+//    alert(z)
+//    arguments[2] = 5
+//
+//}
+//foo(1,2,3)
+
+
+//console.log(f())
+//    if(true){
+//        f()
+//        function f(){
+//            alert("11")
+//        }
+//    }
+
+//    var a = false;
+//var c;
+//    var d = a || c;
+//    alert(d)
+//    function f(x,y,z){
+//        if(arguments.length != 3){
+//            throw new Error("function f called with" + arguments.length + "arguments,but it expects 3 arguments.");
+//        }
+//    }
+//
+//    function max(){
+//        console.log(arguments.callee);
+//        console.log(arguments.caller);
+//        var max = Number.NEGATIVE_INFINITY;
+//
+//        for(var i = 0;i<arguments.length;i++){
+//            if(arguments[i] > max){
+//                max = arguments[i];
+//            }
+//        }
+//        return max;
+//    }
+////    max()
+//
+//    function isArrayLike(o){
+//        if(o && typeof o === "object" && isFinite(o.length) && o.length >= 0 && o.lengh === Math.floor(o.length) && o.length < 4294967296)
+//            return true;
+//        else
+//            return false;
+//    }
+//
+//    function sum(a){
+//        if(isArrayLike(a)){
+//            var total = 0;
+//            for(var i = 0;i < a.length; i++){
+//                var element = a[i];
+//                if(element == null) continue;
+//                if(isfinite(element)) total += element;
+//                else throw new Error ("sum(): elements must be finite numbers");
+//            }
+//            return total;
+//        }
+//        else throw new Error("sum(): arguments must be array-like");
+//    }
+//    var isArray = Function.isArray || function (o) {
+//        return typeof o === "object" && Object.prototype.toString.call(o) === "[object Array]";
+//    };
+//    function flexisum(a){
+//        var total = 0;
+//        for(var i = 0;i < arguments.length; i++){
+//            var element = arguments[i],n;
+//            if(element == null) continue;
+//            if(isArray(element)){
+////                console.log(this)
+//                n = flexisum.apply(this,element);
+//            }
+//            else if(typeof element === "function")
+//                n = Number(element());
+//            else
+//                n = Number(element);
+//            if(isNaN(n))
+//                throw Error("flexisun(): can't convert" + element + "to number");
+//            total += n;
+//        }
+//        return total;
+//    }
+////    alert(flexisum([true,1,2,3]))
+//    uniqueInteger.counter = 0;
+//    function uniqueInteger(){
+//        return uniqueInteger.counter++;
+//    }
+//
+//    function factorial(n){
+//        if(isFinite(n) && n>0 && n == Math.round(n)){
+//            if(!(n in factorial)){
+//                factorial[n] = n*factorial(n-1);
+//            }
+//            return factorial[n];
+//        }else{
+//            return NaN;
+//        }
+//    }
+//factorial[1] = 1;
+//
+//    function f(x,y,z){
+//        return f.length;
+//    }
+//function f1(){
+//    return arguments.length;
+//}
+//var obj = {
+//    name : "Tom",
+//    sayName : function (x,y) {
+//        return x*y;
+//    }
+//};
+////alert(obj.sayName)
+//function trace(o,m){
+//    var original = o[m];
+//    o[m] = function () {
+//        console.log(new Date(),"Entering:",m);
+//        var result = original.apply(this,arguments);
+//        console.log(new Date(),"Exiting:",m);
+//        return result;
+//    };
+//}
+//    trace(obj,"sayName");
+//
+//    obj.sayName(2,4)
+//
+//    var f = new Function("return 2*4;")
+////    alert(f())
+///**
+// * 关于Function构造函数有几点需要特别注意：
+// * 1.Function构造函数允许Javascript在运行时动态的创建并编译函数。
+// * 2.每次调用Function构造函数都会解析函数体，并创建新的函数对象。如果是在一个循环或者是多次调用的函数中执行这个函数，执行效率会受到影响。相比之下，循环中的嵌套函数和函数定义表达式则不会每次执行时都重新编译。
+// * 3.最后一点，样式关于Function()构造函数非常重要的一点，就是他所创建的函数并不是使用词法作用域，相反，函数体代码的编译总是会在顶层函数执行，如下面代码所示：
+// */
+//    var scope = "global";
+//    function constructFunction(){
+//        var scope = "local";
+//        return new Function("return scope");
+//    }
+////    alert(constructFunction()());
+//
+//var ary = []
+//for(var i = 0;i < 301;i++){
+//    ary.push(i);
+//}
+//var totalPage = Math.ceil(ary.length/30);
+////    alert(totalPage)
+</script>
+</html>

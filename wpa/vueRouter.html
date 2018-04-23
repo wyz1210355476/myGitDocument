@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="https://unpkg.com/vue"></script>
+	<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+</head>
+<body>
+<div id="app">
+	<h1>Hello vue router!</h1>
+	<p>
+		<router-link to='/foo'>Go to foo</router-link>
+		<router-link to='/bar'>Go to bar</router-link>
+		<router-link to='/baz'>Go to baz</router-link>
+		<router-link to='/user'>Go to user</router-link>
+		<router-link to='/user/userChild'>Go to userChild</router-link>
+	</p>
+	<button @click="go">click</button>
+	<router-view></router-view>
+	<h1>一</h1>
+	<router-view name="a"></router-view>
+	<h2>二</h2>
+	<router-view name="b"></router-view>
+</div>
+<script type="text/javascript">
+	// 1定义路由组件
+	const Foo = {
+		template:'<div>foo self</div>',
+		mounted(){
+			// alert("this")
+		},
+		watch:{
+			'$route'(to,from){
+				console.log(to)
+			}
+		}
+	}
+	const Bar = {
+		template:'<div>bar self</div>',
+		mounted(){
+			console.log(this.$route)
+		}
+	}
+	const Baz = {
+		template:'<div>Baz self</div>'
+	}
+	const User = {template:`
+    <div class="user">
+      <h2>User {{ $route.params.id }}</h2>
+      <p>what</p>
+      <router-link to='/user/userChild'>Go to userChild</router-link>
+      <router-view></router-view>
+    </div>
+  `}
+  	const Child = {template:'<div>userChild</div>'}
+	// 2定义路由
+	const routes = [
+		{path:'/foo',components:{default:Foo,a:Bar,b:Baz}},
+		{path:'/bar',components:{b:Bar}},
+		{path:'/baz',component:Baz},
+		{path:'/user',component:User,
+		 children:[
+			{path:'/user/userChild',component:Child}
+		 ]
+		}
+	]
+	// 3创建router实列，然后传入‘routes’配置
+	const router = new VueRouter({
+		routes
+	})
+	// 4创建和挂载跟实列
+	const app = new Vue({
+		el:"#app",
+		router,
+		methods:{
+			go(){
+				router.push({ name: 'bar', params: { userId:"1" }})
+			}
+		}
+	})
+</script>
+</body>
+</html>

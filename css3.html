@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	body{
+		margin: 0;
+		padding: 0;
+	}
+		.box{
+			margin: 0;
+			padding: 0;
+			width: 30px;
+			height: 30px;
+			background-color: red;
+			position: absolute;
+			top: 100px;
+			left: 10px;
+		}
+		.css{
+			animation: myfirst 5s;
+			-moz-animation: myfirst 5s;	/* Firefox */
+			-webkit-animation: myfirst 0.5s;	/* Safari 和 Chrome */
+			-o-animation: myfirst 5s;
+			animation-fill-mode:forwards;
+		}
+		@-webkit-keyframes myfirst /* Safari 和 Chrome */
+		{
+			0% {top:100px;left: 10px;opacity:1;}
+			5% {top:130px;left: 15px;opacity:1;}
+			10% {top:148px;left: 20px;opacity:1;}
+			15% {top:164px;left: 25px;opacity:1;}
+			20% {top:176px;left: 30px;opacity:1;}
+			25% {top:184px;left: 35px;opacity:1;}
+			30% {top:190px;left: 40px;opacity:1;}
+			35% {top:194px;left: 45px;opacity:1;}
+			40% {top:197px;left: 50px;opacity:1;}
+			45% {top:199px;left: 55px;opacity:1;}
+			50% {top:200px;left: 60px;opacity:1;}
+			55% {top:199px;left: 75px;opacity:1;}
+			60% {top:197px;left: 80px;opacity:1;}
+			65% {top:194px;left: 85px;opacity:1;}
+			70% {top:190px;left: 90px;opacity:1;}
+			75% {top:184px;left: 95px;opacity:1;}
+			80% {top:176px;left: 100px;opacity:1;}
+			85% {top:164px;left: 105px;opacity:1;}
+			90% {top:148px;left: 110px;opacity:1;}
+			95% {top:130px;left: 115px;opacity:1;}
+			100% {top:100px;left: 120px;opacity:1;}
+		}
+
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+</body>
+<script type="text/javascript">
+	document.getElementsByClassName("box")[0].onclick = function(){
+	
+		this.classList.add("css");
+	}
+	console.log(3.2+3.2)
+
+	// let  dom = document.getElementsByClassName("box")[0],
+	// topDistance = window.getComputedStyle(dom).top,
+	// leftDistance = window.getComputedStyle(dom).left,
+	// tdistance,ldistance,time = 1/1000,
+	// a;
+	// let timer = setInterval(() => {
+	// 	time += 1/1000;
+	// 	a = -(1*1000*time*time)/2;
+	// 	if(tdistance <= 0){
+
+	// 	}
+	// 	tdistance = 10*time + a;
+	// 	ldistance = 1000*time;
+	// 	console.log(tdistance);
+	// 	dom.style.top = parseInt(topDistance)+tdistance+'px';
+	// 	dom.style.left =  parseInt(leftDistance)+ldistance+'px';
+	// 	// debugger
+	// 	if(tdistance >= 300){
+	// 		clearInterval(timer)
+	// 	}
+	// },1)
+	let ary = [],
+	a = -130,
+	b = 3.2,
+	c;
+	for(let i = 1;i < 10;i++){
+		c = a+b;
+		b += 3.2; 
+		a = c;
+		ary.push(c)
+	}
+	console.log(ary)
+	function f(){
+		let a = 1,
+		b = 1;
+		function back(){
+			console.log("b:"+b++)
+			var d = setTimeout(() => {
+				if(d >= 3){
+				return
+			}
+				a++
+				alert(a)
+			},5000)
+			console.log(d)
+			
+			return d;
+		}
+
+		return back;
+	}
+	// let bb = f();
+	// console.log(bb())
+	// document.getElementsByClassName("box")[0].onclick = function(){
+	// 	var d = setTimeout(() => {
+	// 			console.log(d)
+	// 		},1000)
+		
+	// }
+
+
+</script>
+</html>

@@ -3,6 +3,7 @@
 <head>
 	<title></title>
 	<script type="text/javascript" src="https://unpkg.com/vue"></script>
+	<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
 	<style type="text/css">
 		
 	</style>
@@ -184,7 +185,129 @@
 <div id="example">
   <my-component class="type" data-3d-date-picker="true"></my-component>
 </div>
+<!-- 混入 -->
+ <div id="app20">
+    <p @click="sub">num:{{ num }}</p>
+	<p>str:{{str}}</p>
+    <P><button @click="add">增加数量</button></P>
+	<input v-model='str' name="">
+ </div>
+<!-- 选项合并 -->
+<div id="app21">
+	<p>num:{{ str }}</p>
+    <p><button @click="add">选项合并</button></p>
+</div>
+<!-- 同名钩子函数 -->
+<div id="app22">
+	<p>num:{{ num }}</p>
+    <p><button @click="add">同名钩子函数</button></p>
+</div>
 <script type="text/javascript">
+	// 同名钩子函数
+	var mixin = {
+		created: function () {
+			console.log('混入对象的钩子被调用')
+		},
+		updated:function(){
+			alert("混入对象钩子方法")
+		}
+	}
+
+	new Vue({
+		el:"#app22",
+		mixins: [mixin],
+		data:{
+			num:1
+		},
+		created: function () {
+			console.log('组件钩子被调用')
+		},
+		methods:{
+			add(){
+				alert("组件钩子方法");
+				this.num++;
+			}
+		}
+	})
+	// 选项合并
+	var mixin = {
+		data: function () {
+			return {
+				message: 'hello',
+				foo: 'abc'
+			}
+		},
+		updated:function(){
+      	alert("方法")
+      }
+	}
+
+	new Vue({
+		el:'#app21',
+		
+		data: function () {
+			return {
+				message: 'goodbye',
+				bar: 'def',
+				str:2
+			}
+		},
+		created: function () {
+
+			console.log(this.$data)
+    		// => { message: "goodbye", foo: "abc", bar: "def" }
+		},
+		methods:{
+			add(){
+				alert('调用事件方法');
+				this.str++;
+			}
+		},
+		mixins: [mixin]
+	})
+ //混入
+ /**
+	由于数据更改导致的虚拟 DOM 重新渲染和打补丁，在这之后会调用updated
+ */
+
+    var addLog={//局部混入
+      updated:function(){
+      	alert("在执行")
+        // console.log("数据放生变化,变化成"+this.num+".");
+      }
+    }
+
+    Vue.mixin({//全局混入
+
+
+    	updated:function(){
+
+
+    		console.log('我是全局被混入的');
+
+
+    	}
+
+
+    })
+    var app19 = new Vue({
+      el:'#app20',
+      data:{
+        num:1,
+        str:2
+      },
+      methods:{
+        add:function(){
+        	alert("先执行")
+          this.num++;
+        },
+        sub:function(){
+        	this.num--;
+        }
+      },
+      mixins:[mixin]
+    })
+
 	// 注册
 Vue.component('my-component', {
   template: '<div>A custom component!</div>'

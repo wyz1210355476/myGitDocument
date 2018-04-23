@@ -144,5 +144,32 @@ proxy.sendGift('奶茶');
 console.log($(window).width())
 //console.log(window.pageXOffset)
 //console.log(window.pageYOffset)
+var num = 8004000;
+var str = "壹仟贰佰叁拾肆万伍仟陆佰柒拾捌";
+var ary = ['零','壹','贰','叁','肆','伍','陆','柒','捌','玖'];
+var obj = {
+    '0':"万",
+    '1':"拾",
+    '2':"佰",
+    '3':"仟",
+
+    '4':"亿"
+}
+var f = (number) => {
+    number = number+'';
+    var numAry = number.split("");
+    // debugger
+    var len = numAry.length;
+    var strAry = [];
+    var j = 0;
+    for(var i = len-1;i >= 0;i--){
+        j = parseInt((len-1-i)/4) === 2 && (len-1-i)%4 === 0 ? '4' : (len-1-i)%4;
+        var unit = i === len-1 ? "" : numAry[i] == 0 ? "" : obj[j];
+        var strNum =  i === len-1 && numAry[i] == 0 ? "" : ary[numAry[i]];
+        strAry.unshift(strNum+unit)
+    }
+    return strAry;
+}
+console.log(f(num))
 </script>
 </html>
