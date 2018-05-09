@@ -138,7 +138,7 @@
     console.log(rtypenamespace.exec('click.fsdaf'));
 
     // 正则表达式
-    var str = 'w ab dsd ab jlkjab abjlkj ab jklj cd ';
+    var str = 'w ab dsd ab jlkjab abjlkj ab jklj scda ';
     console.log('w ab dsd ab jlkjab abjlkj ab jklj cd ')
     console.log('/\\ba(b)\\b|(cd)/g')
     // 全局匹配
@@ -151,7 +151,7 @@
 
     // 非全局匹配
     console.log("非全局匹配")
-    var reg = /\ba(b)\b|(cd)/;
+    var reg = /\ba(b)\b/;
     console.log(str.match(reg));
     console.log(reg.exec(str));
     console.log(reg.exec(str));
@@ -197,6 +197,17 @@
     var reg = /^(<a)[\s\S]*(class=(\"|\')u-title(\"|\'))([\s\S]*)>([\s\S]*)(<\/a>)$/;
     var str = '<a class="u-title" onclick="javascript:_reportData(\'56616\',\'钢铁侠3\',\'1\')" href="//www.mgtv.com/b/56616/750962.html" target="_blank">钢铁侠3</a>';
     console.log(reg.test(str))
+    var reg = /\b\w+(?=ing\b)/g;
+    var str = "I'm singing while you're dancing";
+    console.log(str.match(reg));
+
+    var reg = /((?<=\d)\d{3})+\b/;
+    var str = "1234567890";
+    console.log(str.replace(reg,"$1,"));
+    // var n="1279834847944074100465236.33",
+    // re=/(d{1,3})(?=(d{3})+(?:$|.))/g,
+    // n1=n.replace(re,"$1,");
+    // alert(n+" "+n1)
 </script>
 </body>
 </html>
