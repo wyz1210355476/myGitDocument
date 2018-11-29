@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title><%= htmlWebpackPlugin.options.title %></title>
+	<script>
+		var modernBrowser = (
+				'fetch' in window &&
+				'assign' in Object
+			);
+		if(!moderBrowser){
+			var scriptElement = document.createElement('script');
+			scriptElement.async = false;
+			scriptElement.src = '/polyfills.bundle.js';
+			document.head.appendChild(scriptElement);
+		}
+	</script>
+</head>
+<body>
+	<div id="app"></div>
+</body>
+</html>
