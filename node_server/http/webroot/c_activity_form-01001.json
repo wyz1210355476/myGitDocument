@@ -1,0 +1,662 @@
+{
+  "pageId" : null,
+  "compId" : "c_activity_form-01001",
+  "compReqParameter" : null,
+  "config" : {
+    "elemsCss" : [ ],
+    "prop" : { },
+    "elemList" : [ {
+      "elem" : "e_box",
+      "selector" : ".p_ActivityEnroll",
+      "style" : null,
+      "name" : "活动报名整体"
+    }, {
+      "elem" : "e_box",
+      "selector" : ".p_Enroll",
+      "style" : null,
+      "name" : "活动报名框架"
+    }, {
+      "elem" : "e_box",
+      "selector" : ".p_header",
+      "style" : null,
+      "name" : "活动标题信息"
+    }, {
+      "elem" : "e_box",
+      "selector" : ".p_head",
+      "style" : null,
+      "name" : ""
+    }, {
+      "elem" : "e_title",
+      "selector" : ".p_title",
+      "style" : null,
+      "name" : "活动标题"
+    }, {
+      "elem" : "e_box",
+      "selector" : ".p_headerC",
+      "style" : null,
+      "name" : ""
+    }, {
+      "elem" : "e_box",
+      "selector" : ".p_headerA",
+      "style" : null,
+      "name" : "活动详细信息"
+    }, {
+      "elem" : "e_link",
+      "selector" : ".p_LinkA",
+      "style" : null,
+      "name" : ""
+    }, {
+      "elem" : "e_box",
+      "selector" : ".p_images",
+      "style" : null,
+      "name" : "活动图片区"
+    }, {
+      "elem" : "e_image",
+      "selector" : ".p_thumbnail",
+      "style" : null,
+      "name" : "活动图片"
+    }, {
+      "elem" : "e_box",
+      "selector" : ".p_headerB",
+      "style" : null,
+      "name" : ""
+    }, {
+      "elem" : "e_box",
+      "selector" : ".p_name",
+      "style" : null,
+      "name" : "活动名称"
+    }, {
+      "elem" : "e_title",
+      "selector" : ".p_AssistNameA",
+      "style" : null,
+      "name" : "活动名称标题"
+    }, {
+      "elem" : "e_title",
+      "selector" : ".p_timeA",
+      "style" : null,
+      "name" : "活动名称"
+    }, {
+      "elem" : "e_box",
+      "selector" : ".p_time",
+      "style" : null,
+      "name" : "报名日期"
+    }, {
+      "elem" : "e_title",
+      "selector" : ".p_AssistNameB",
+      "style" : null,
+      "name" : "报名日期标题"
+    }, {
+      "elem" : "e_title",
+      "selector" : ".p_timeB",
+      "style" : null,
+      "name" : "报名日期"
+    }, {
+      "elem" : "e_box",
+      "selector" : ".p_bewrite",
+      "style" : null,
+      "name" : "活动描述"
+    }, {
+      "elem" : "e_title",
+      "selector" : ".p_AssistNameC",
+      "style" : null,
+      "name" : "活动描述标题"
+    }, {
+      "elem" : "e_article",
+      "selector" : ".p_timeC",
+      "style" : null,
+      "name" : "活动描述信息"
+    }, {
+      "elem" : "e_box",
+      "selector" : ".p_details",
+      "style" : null,
+      "name" : "活动详情"
+    }, {
+      "elem" : "e_box",
+      "selector" : ".p_place",
+      "style" : null,
+      "name" : "活动地点"
+    }, {
+      "elem" : "e_title",
+      "selector" : ".p_placeA",
+      "style" : null,
+      "name" : "活动地点"
+    }, {
+      "elem" : "e_title",
+      "selector" : ".p_placeB",
+      "style" : null,
+      "name" : "活动地点"
+    }, {
+      "elem" : "e_box",
+      "selector" : ".p_Date",
+      "style" : null,
+      "name" : "活动日期"
+    }, {
+      "elem" : "e_title",
+      "selector" : ".p_DateA",
+      "style" : null,
+      "name" : "活动日期"
+    }, {
+      "elem" : "e_title",
+      "selector" : ".p_DateB",
+      "style" : null,
+      "name" : "活动日期"
+    }, {
+      "elem" : "e_box",
+      "selector" : ".p_TypesBox",
+      "style" : null,
+      "name" : "预订数量容器"
+    }, {
+      "elem" : "e_title",
+      "selector" : ".p_TypesBoxA",
+      "style" : null,
+      "name" : "预订数量标题"
+    }, {
+      "elem" : "e_box",
+      "selector" : ".p_NumberBox",
+      "style" : null,
+      "name" : ""
+    }, {
+      "elem" : "e_btn",
+      "selector" : ".p_minus",
+      "style" : null,
+      "name" : "减少按钮"
+    }, {
+      "elem" : "e_input",
+      "selector" : ".p_input",
+      "style" : null,
+      "name" : ""
+    }, {
+      "elem" : "e_btn",
+      "selector" : ".p_plus",
+      "style" : null,
+      "name" : "增加按钮"
+    }, {
+      "elem" : "e_box",
+      "selector" : ".p_content",
+      "style" : null,
+      "name" : "联系人信息内容"
+    }, {
+      "elem" : "e_box",
+      "selector" : ".p_headA",
+      "style" : null,
+      "name" : ""
+    }, {
+      "elem" : "e_title",
+      "selector" : ".p_titleA",
+      "style" : null,
+      "name" : "联系人信息标题"
+    }, {
+      "elem" : "e_box",
+      "selector" : ".p_contentC",
+      "style" : null,
+      "name" : ""
+    }, {
+      "elem" : "e_box",
+      "selector" : ".p_ContactsBox",
+      "style" : null,
+      "name" : "联系人容器"
+    }, {
+      "elem" : "e_box",
+      "selector" : ".p_ContactsBoxA",
+      "style" : null,
+      "name" : ""
+    }, {
+      "elem" : "e_title",
+      "selector" : ".p_AssistNameD",
+      "style" : null,
+      "name" : "联系人引导标题"
+    }, {
+      "elem" : "e_box",
+      "selector" : ".p_StorBox",
+      "style" : null,
+      "name" : ""
+    }, {
+      "elem" : "e_input",
+      "selector" : ".p_timeD",
+      "style" : null,
+      "name" : "联系人输入框"
+    }, {
+      "elem" : "e_icon",
+      "selector" : ".p_star",
+      "style" : null,
+      "name" : "必填项标记"
+    }, {
+      "elem" : "e_box",
+      "selector" : ".p_NicknameBox",
+      "style" : null,
+      "name" : "昵称容器"
+    }, {
+      "elem" : "e_title",
+      "selector" : ".p_AssistNameE",
+      "style" : null,
+      "name" : "昵称引导标题"
+    }, {
+      "elem" : "e_input",
+      "selector" : ".p_timeE",
+      "style" : null,
+      "name" : "昵称输入框"
+    }, {
+      "elem" : "e_box",
+      "selector" : ".p_GenderBox",
+      "style" : null,
+      "name" : ""
+    }, {
+      "elem" : "e_title",
+      "selector" : ".p_nameL",
+      "style" : null,
+      "name" : "性别引导标题"
+    }, {
+      "elem" : "e_radio",
+      "selector" : ".p_radioA",
+      "style" : null,
+      "name" : ""
+    }, {
+      "elem" : "e_radio",
+      "selector" : ".p_radioB",
+      "style" : null,
+      "name" : ""
+    }, {
+      "elem" : "e_box",
+      "selector" : ".p_PhoneBox",
+      "style" : null,
+      "name" : "手机容器"
+    }, {
+      "elem" : "e_box",
+      "selector" : ".p_PhoneBoxA",
+      "style" : null,
+      "name" : ""
+    }, {
+      "elem" : "e_title",
+      "selector" : ".p_AssistNameF",
+      "style" : null,
+      "name" : "手机引导标题"
+    }, {
+      "elem" : "e_input",
+      "selector" : ".p_timeF",
+      "style" : null,
+      "name" : "手机输入框"
+    }, {
+      "elem" : "e_box",
+      "selector" : ".p_TelBox",
+      "style" : null,
+      "name" : "电话容器"
+    }, {
+      "elem" : "e_title",
+      "selector" : ".p_AssistNameG",
+      "style" : null,
+      "name" : "电话引导标题"
+    }, {
+      "elem" : "e_input",
+      "selector" : ".p_timeG",
+      "style" : null,
+      "name" : "电话输入框"
+    }, {
+      "elem" : "e_box",
+      "selector" : ".p_MailBox",
+      "style" : null,
+      "name" : "邮箱容器"
+    }, {
+      "elem" : "e_title",
+      "selector" : ".p_AssistNameH",
+      "style" : null,
+      "name" : "邮箱引导标题"
+    }, {
+      "elem" : "e_input",
+      "selector" : ".p_timeH",
+      "style" : null,
+      "name" : "邮箱输入框"
+    }, {
+      "elem" : "e_box",
+      "selector" : ".p_contentA",
+      "style" : null,
+      "name" : "联系方式与职位内容"
+    }, {
+      "elem" : "e_box",
+      "selector" : ".p_headB",
+      "style" : null,
+      "name" : ""
+    }, {
+      "elem" : "e_title",
+      "selector" : ".p_titleB",
+      "style" : null,
+      "name" : "联系方式与职位标题"
+    }, {
+      "elem" : "e_box",
+      "selector" : ".p_contentD",
+      "style" : null,
+      "name" : ""
+    }, {
+      "elem" : "e_box",
+      "selector" : ".p_QQBox",
+      "style" : null,
+      "name" : "QQ容器"
+    }, {
+      "elem" : "e_title",
+      "selector" : ".p_AssistNameI",
+      "style" : null,
+      "name" : "QQ引导标题"
+    }, {
+      "elem" : "e_input",
+      "selector" : ".p_timeI",
+      "style" : null,
+      "name" : "邮箱输入框"
+    }, {
+      "elem" : "e_box",
+      "selector" : ".p_WechatBox",
+      "style" : null,
+      "name" : "微信容器"
+    }, {
+      "elem" : "e_title",
+      "selector" : ".p_AssistNameJ",
+      "style" : null,
+      "name" : "微信引导标题"
+    }, {
+      "elem" : "e_input",
+      "selector" : ".p_timeJ",
+      "style" : null,
+      "name" : "微信输入框"
+    }, {
+      "elem" : "e_box",
+      "selector" : ".p_ZipCodeBox",
+      "style" : null,
+      "name" : "邮编容器"
+    }, {
+      "elem" : "e_title",
+      "selector" : ".p_AssistNameK",
+      "style" : null,
+      "name" : "邮编引导标题"
+    }, {
+      "elem" : "e_input",
+      "selector" : ".p_timeK",
+      "style" : null,
+      "name" : "邮编输入框"
+    }, {
+      "elem" : "e_box",
+      "selector" : ".p_FaxBox",
+      "style" : null,
+      "name" : "传真容器"
+    }, {
+      "elem" : "e_title",
+      "selector" : ".p_AssistNameL",
+      "style" : null,
+      "name" : "传真引导标题"
+    }, {
+      "elem" : "e_input",
+      "selector" : ".p_timeL",
+      "style" : null,
+      "name" : "传真输入框"
+    }, {
+      "elem" : "e_box",
+      "selector" : ".p_SectorBox",
+      "style" : null,
+      "name" : "部门容器"
+    }, {
+      "elem" : "e_title",
+      "selector" : ".p_AssistNameM",
+      "style" : null,
+      "name" : "部门引导标题"
+    }, {
+      "elem" : "e_droplist",
+      "selector" : ".p_timeM",
+      "style" : null,
+      "name" : "部门多选框"
+    }, {
+      "elem" : "e_title",
+      "selector" : ".p_icon",
+      "style" : null,
+      "name" : "部门引导标题"
+    }, {
+      "elem" : "e_title",
+      "selector" : ".p_iconA",
+      "style" : null,
+      "name" : "部门引导标题"
+    }, {
+      "elem" : "e_box",
+      "selector" : ".p_NatureBox",
+      "style" : null,
+      "name" : "职务容器"
+    }, {
+      "elem" : "e_title",
+      "selector" : ".p_AssistNameN",
+      "style" : null,
+      "name" : "职务引导标题"
+    }, {
+      "elem" : "e_droplist",
+      "selector" : ".p_timeN",
+      "style" : null,
+      "name" : "职务多选框"
+    }, {
+      "elem" : "e_title",
+      "selector" : ".p_iconB",
+      "style" : null,
+      "name" : "部门引导标题"
+    }, {
+      "elem" : "e_title",
+      "selector" : ".p_iconC",
+      "style" : null,
+      "name" : "部门引导标题"
+    }, {
+      "elem" : "e_box",
+      "selector" : ".p_BusinessBox",
+      "style" : null,
+      "name" : "负责业务容器"
+    }, {
+      "elem" : "e_title",
+      "selector" : ".p_AssistNameO",
+      "style" : null,
+      "name" : "负责业务引导标题"
+    }, {
+      "elem" : "e_input",
+      "selector" : ".p_timeO",
+      "style" : null,
+      "name" : "负责业务输入框"
+    }, {
+      "elem" : "e_box",
+      "selector" : ".p_contentB",
+      "style" : null,
+      "name" : "企业信息内容"
+    }, {
+      "elem" : "e_box",
+      "selector" : ".p_headC",
+      "style" : null,
+      "name" : ""
+    }, {
+      "elem" : "e_title",
+      "selector" : ".p_titleC",
+      "style" : null,
+      "name" : "企业信息标题"
+    }, {
+      "elem" : "e_box",
+      "selector" : ".p_contentE",
+      "style" : null,
+      "name" : ""
+    }, {
+      "elem" : "e_box",
+      "selector" : ".p_CorNameBox",
+      "style" : null,
+      "name" : "企业名称容器"
+    }, {
+      "elem" : "e_title",
+      "selector" : ".p_AssistNameP",
+      "style" : null,
+      "name" : "企业名称引导标题"
+    }, {
+      "elem" : "e_input",
+      "selector" : ".p_timeP",
+      "style" : null,
+      "name" : "企业名称输入框"
+    }, {
+      "elem" : "e_box",
+      "selector" : ".p_TypeBox",
+      "style" : null,
+      "name" : "企业类型容器"
+    }, {
+      "elem" : "e_title",
+      "selector" : ".p_AssistNameQ",
+      "style" : null,
+      "name" : "企业类型引导标题"
+    }, {
+      "elem" : "e_input",
+      "selector" : ".p_timeQ",
+      "style" : null,
+      "name" : "企业类型输入框"
+    }, {
+      "elem" : "e_box",
+      "selector" : ".p_WebsitesBox",
+      "style" : null,
+      "name" : "企业官网容器"
+    }, {
+      "elem" : "e_title",
+      "selector" : ".p_AssistNameR",
+      "style" : null,
+      "name" : "企业官网引导标题"
+    }, {
+      "elem" : "e_input",
+      "selector" : ".p_timeR",
+      "style" : null,
+      "name" : "企业官网输入框"
+    }, {
+      "elem" : "e_box",
+      "selector" : ".p_AreaBox",
+      "style" : null,
+      "name" : "所属地区容器"
+    }, {
+      "elem" : "e_title",
+      "selector" : ".p_AreaHead",
+      "style" : null,
+      "name" : "所属地区引导标题"
+    }, {
+      "elem" : "e_droplist",
+      "selector" : ".p_provice",
+      "style" : null,
+      "name" : "省份多选框"
+    }, {
+      "elem" : "e_title",
+      "selector" : ".p_iconD",
+      "style" : null,
+      "name" : ""
+    }, {
+      "elem" : "e_title",
+      "selector" : ".p_iconE",
+      "style" : null,
+      "name" : "部门引导标题"
+    }, {
+      "elem" : "e_droplist",
+      "selector" : ".p_city",
+      "style" : null,
+      "name" : "城市多选框"
+    }, {
+      "elem" : "e_title",
+      "selector" : ".p_iconF",
+      "style" : null,
+      "name" : ""
+    }, {
+      "elem" : "e_title",
+      "selector" : ".p_iconG",
+      "style" : null,
+      "name" : "部门引导标题"
+    }, {
+      "elem" : "e_droplist",
+      "selector" : ".p_area",
+      "style" : null,
+      "name" : "区域多选框"
+    }, {
+      "elem" : "e_title",
+      "selector" : ".p_iconH",
+      "style" : null,
+      "name" : "部门引导标题"
+    }, {
+      "elem" : "e_title",
+      "selector" : ".p_iconI",
+      "style" : null,
+      "name" : "部门引导标题"
+    }, {
+      "elem" : "e_box",
+      "selector" : ".p_AddressBox",
+      "style" : null,
+      "name" : "详细地址容器"
+    }, {
+      "elem" : "e_title",
+      "selector" : ".p_AssistNameS",
+      "style" : null,
+      "name" : "详细地址引导标题"
+    }, {
+      "elem" : "e_input",
+      "selector" : ".p_timeS",
+      "style" : null,
+      "name" : "详细地址输入框"
+    }, {
+      "elem" : "e_box",
+      "selector" : ".p_CustomTextarea",
+      "style" : null,
+      "name" : ""
+    }, {
+      "elem" : "e_title",
+      "selector" : ".p_CustomTextareaA",
+      "style" : null,
+      "name" : "申请说明引导标题"
+    }, {
+      "elem" : "e_text",
+      "selector" : ".p_textarea",
+      "style" : null,
+      "name" : ""
+    }, {
+      "elem" : "e_box",
+      "selector" : ".p_CaptchaBox",
+      "style" : null,
+      "name" : "验证码信息区"
+    }, {
+      "elem" : "e_box",
+      "selector" : ".p_CaptchaBoxA",
+      "style" : null,
+      "name" : ""
+    }, {
+      "elem" : "e_title",
+      "selector" : ".p_CaptchaBoxName",
+      "style" : null,
+      "name" : "验证码"
+    }, {
+      "elem" : "e_input",
+      "selector" : ".p_captcha",
+      "style" : null,
+      "name" : "验证码输入框"
+    }, {
+      "elem" : "e_icon",
+      "selector" : ".p_starA",
+      "style" : null,
+      "name" : "必填项标记"
+    }, {
+      "elem" : "e_image",
+      "selector" : ".p_image",
+      "style" : null,
+      "name" : "验证码图片"
+    }, {
+      "elem" : "e_btn",
+      "selector" : ".p_SubmitBtn",
+      "style" : null,
+      "name" : "提交按钮"
+    }, {
+      "elem" : "e_LoginPrompt",
+      "selector" : ".p_LoginPrompt",
+      "style" : null,
+      "name" : ""
+    }, {
+      "elem" : "e_PromptInfo",
+      "selector" : ".p_PromptSucc",
+      "style" : null,
+      "name" : ""
+    }, {
+      "elem" : "e_AbnormalPrompt",
+      "selector" : ".p_PromptDisabled",
+      "style" : null,
+      "name" : ""
+    }, {
+      "elem" : "e_PromptInfo",
+      "selector" : ".p_PromptFail",
+      "style" : null,
+      "name" : ""
+    } ],
+    "i18n" : { },
+    "data" : null
+  }
+}

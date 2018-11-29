@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.leaveMsgBox{
+			height: 100vh;
+			width: 100vw;
+			position: fixed;
+			left: 0;
+			top: 0;
+			background-color: #f0f0f0;
+		}
+		.msgCon{
+			font-size: 1.5vh;
+			color: #666;
+			width: 100vw;
+			height: 80vh;
+			border:none;
+			padding: 20px;
+			margin-top: 30px;
+		}
+		.msgCon::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+			color:#999;
+			font-size: 2vh;
+		}
+		.msgCon:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+			color:#999;
+			font-size: 2vh;
+		}
+		.msgCon::-moz-placeholder { /* Mozilla Firefox 19+ */
+			color:#999;
+			font-size: 2vh;
+		}
+		.msgCon:-ms-input-placeholder { /* Internet Explorer 10-11 */
+			color:#999;
+			font-size: 2vh;
+		}
+		.btnBox{
+			height: 10vh;
+			display: flex;
+		}
+		.btnBox>.itemBtn{
+			flex-grow:1;
+			font-size:24px;
+			text-align: center;
+			height: 10vh;
+			line-height: 10vh;
+		}
+		.msgConfirm{
+			background-color: #d60058;
+		}
+		.msgCancel{
+			background-color: #fff;
+			border-top: 1px solid #999;
+		}
+	</style>
+</head>
+<body>
+	<div class="leaveMsgBox">
+		<form action="">
+			<textarea class="msgCon" maxlength="200" placeholder="请输入留言内容,最多输入200字"></textarea>
+		</form>
+		
+		<div class="btnBox">
+			<div class="itemBtn msgConfirm">确定</div>
+			<div class="itemBtn msgCancel">取消</div>
+		</div>
+		<form action="#" method="post" name="form1" onsubmit="return X();">
+        <input type="text" value="" style="height: 50px" />
+        <input onclick="Y()" type="submit" value="提交" />
+    </form>
+
+	</div>
+	<script>
+		function X(){
+        alert(11);
+        return false;
+    }
+    function Y(){
+        alert(1);
+    }
+
+	</script>
+</body>
+</html>

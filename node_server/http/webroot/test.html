@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script>
+// const s = new Set();
+
+// [2, 3, 5, 4, 5, 2, 2].forEach(x => s.add(x));
+// s.add("w")
+// for (let item of s.keys()) {
+//   console.log(item);
+// }
+// for (let item of s.entries()) {
+//   console.log(item);
+// }
+// console.log(s)
+// for (let i of s) {
+//   console.log(i);
+// }
+// var f = new Function('return 1');
+// console.log(f)
+
+// var st = Object.prototype.toString;
+
+// console.log(st.call([]));
+var btnSucc = document.createElement("button");
+var btnErr = document.createElement("button");
+btnSucc.innerHTML = "Click me for success!";
+btnErr.innerHTML = "Click me for error!";
+btnSucc.onclick = function(){
+	promiseMethod('success').then(function(data){
+		console.log(data);
+	},function(err){
+		console.log(err)
+	})
+};
+btnErr.onclick = function(){
+	promiseMethod('error').then(function(data){
+		console.log(data);
+	},function(err){
+		console.log(err);
+	})
+};
+
+document.body.appendChild(btnSucc);
+document.body.appendChild(btnErr);
+function promiseMethod(status){
+	const promise = new Promise(function(resolve,reject){
+		console.log("1");
+		resolve("异步");
+		console.log("2");
+		// setTimeout(function(val){
+		// 	console.log(val)
+		// 	if(status === 'success'){
+		// 		resolve('You have clicked the success btn!')
+		// 		console.log("1")
+		// 	}else{
+		// 		reject('You have clicked the error btn!')
+		// 	}
+		// 	console.log("2")
+		// },3000,"done")
+	})
+	 console.log("3")
+	return promise;
+}
+
+function loadImageAsync(url){
+	return new Promise(function(resolve,reject){
+		const img = new Image();
+
+		img.onload = function(){
+			resolve(img);
+		}
+
+		img.onerror = function(){
+
+			reject(url);
+		}
+
+		img.src = url;
+	})
+}
+
+let urlRight = './ZCQJ6YP$@33H5@J26LYCLZY.png';
+let urlError = './ZCQJ6YP$@33H5@J26LYCL.png';
+
+// loadImageAsync(urlRight).then(function(data){
+// 	console.log(data.height);
+// });
+// loadImageAsync(urlError).then(function(data){
+
+// },function(error){
+// 	new Error('Could not load image at ' + error);
+// })
+
+const getJSON = function(url){
+	const promise = new Promise(function(resolve,reject){
+		const handler = function(){
+			if(this.readyState !== 4){
+				return;
+			}
+			if(this.status === 200){
+				resolve(this.response);
+			}else{
+				reject(new Error(this.statusText));
+			}
+		};
+
+		const client = new XMLHttpRequest();
+		client.open("GET",url);
+		client.onreadystatechange = handler;
+		client.responseType = "json";
+		client.setRequestHeader("Accept","application/json");
+		client.send();
+	});
+
+	return promise;
+}
+
+// getJSON("post.json").then(function(json){
+// 	console.log('Contents: '+ json);
+// },function(error){
+// 	console.error('出错了',error)
+// })
+// console.log(setTimeout(function(){
+// 	console.log(2)
+// 	return "y";
+// },5000))
+// console.log(setTimeout(function(){
+// 	console.log(2)
+// 	return "y";
+// },5000))
+// const p1 = new Promise(function(resolve,reject){
+// 	setTimeout(() => reject(new Error('fail')),3000)
+// })
+// const p2 = new Promise(function(resolve,reject){
+// 	setTimeout(() => resolve(p1),1000)
+// })
+
+// p2.then(result => console.log(result),error => console.log(error));
+
+// getJSON("/posts.json").then(function(json) {
+//   return json.post;
+// }).then(function(post) {
+//   console.log(post)
+// });
+
+getJSON("/posts.json").then(function(json) {
+ return getJSON(json.url);
+  
+}).then(function(post) {
+  console.log(post)
+},function(error){
+	console.log("er"+error)
+});
+
+const someAsyncThing = function() {
+  return new Promise(function(resolve, reject) {
+    // setTimeout(function () { throw new Error('test') }, 0)
+    // let num = x+2;
+    resolve(2);
+    
+  });
+};
+
+someAsyncThing().catch(function(error){
+	console.log(error);
+	return 3;
+}).then(function(data) {
+  console.log(data);
+}).finally(() => {
+	console.log("55")
+}).then((data) => {
+	console.log(data)
+});
+
+</script>
+</html>
