@@ -411,7 +411,7 @@ new Vue({
 Vue.component("my-component",{
 	props:["num"],
 	name:"myComponent",
-	template:'<div><p>{{num}}</p><my-component :num="num+1" v-if="currNum"></my-component></div>',
+	template:'<div><p>递归组件{{num}}</p><my-component :num="num+1" v-if="currNum"></my-component></div>',
 	computed:{
 		currNum:function(){
 			return this.num < 10;
@@ -421,7 +421,7 @@ Vue.component("my-component",{
 var vmm = new Vue({
 	el:"#app14",
 	data:{
-		numb:5,
+		numb:1,
 		str:'aa',
 		obj:{
 			name:"jack"

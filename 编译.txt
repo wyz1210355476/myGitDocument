@@ -1,0 +1,10 @@
+unicode:
+\u5979\u5988:
+\u0031\u0035\u0037\u0030\u0033\u0031\u0036\u0030\u0038\u0035\u0036
+\u5979\u7238:
+\u0031\u0035\u0030\u0032\u0037\u0039\u0032\u0033\u0038\u0032\u0036
+
+/wholesale/promotion/fullcut		
+/wholesale/promotion/fullGift		
+/wholesale/promotion/couponLibrary		
+/wholesale/promotion/giftManagement		
