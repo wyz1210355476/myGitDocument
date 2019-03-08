@@ -50,7 +50,7 @@ var webpackConfig = merge(baseWebpackConfig,{
 			filename: process.env.NODE_ENV === 'testing'//输出的文件名
 				? 'index.html'
 				: config.build.index,
-				template: 'index.html',//成的文件所依赖哪一个html文件模板，模板类型可以是html、jade、ejs等。但是要注意的是，如果想使用自定义的模板文件的时候，需要安装对应的loader
+				template: 'index.html',//生成的文件所依赖哪一个html文件模板，模板类型可以是html、jade、ejs等。但是要注意的是，如果想使用自定义的模板文件的时候，需要安装对应的loader
 				/**
 					inject有四个值： true body head false
 					true 默认值，script标签位于html文件的 body 底部

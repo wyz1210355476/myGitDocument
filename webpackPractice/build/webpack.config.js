@@ -12,20 +12,20 @@ console.log(process.env.NODE_ENV);
     	index: './src/index.js'
     },
     output: {
-      filename: '[name].[chunkhash].js',
-      path: path.resolve(__dirname, '../dist'),
-      publicPath:'./',
-      chunkFilename:'my/[name].[chunkhash].js'
+		filename: '[name].[chunkhash].js',
+		path: path.resolve(__dirname, '../dist'),
+		publicPath:'./',
+		chunkFilename:'my/[name].[chunkhash].js'
     },
    module: {
     rules: [
-      {
-        test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          fallback: "style-loader",
-          use: "css-loader"
-        })
-      }
+		{
+			test: /\.css$/,
+			use: ExtractTextPlugin.extract({
+				fallback: "style-loader",
+				use: "css-loader"
+			})
+		}
     ]
    },
 	plugins:[
@@ -38,12 +38,12 @@ console.log(process.env.NODE_ENV);
 		new webpack.ProvidePlugin({
 			_:'lodash'
 		}),
-    new CopyWebpackPlugin([
-      {
-        from: path.resolve(__dirname, '../static'),
-        to: 'my',
-        ignore: ['.*']
-      }
-    ])
+		new CopyWebpackPlugin([
+			{
+				from: path.resolve(__dirname, '../static'),
+				to: 'my',
+				ignore: ['.*']
+			}
+		])
 	]
   };
