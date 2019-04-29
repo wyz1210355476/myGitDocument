@@ -44,4 +44,17 @@ var proxyMiddleware = require('http-proxy-middleware');//用于把请求代理�
 /**
  * 例如：我们当前主机为http://localhost:3000/，现在我们有一个需求，如果我们请求/api，我们不希望由3000来处理这个请求，而希望由另一台服务器来处理这个请求
  */
-var webpackConfig = require('./webpack.dev.conf')
+var webpackConfig = require('./webpack.dev.conf');
+
+// default port where dev server listens for incoming traffic
+var port = process.env.PORT || config.dev.port;
+
+// automatically open browser, if not set will be false
+var autoOpenBrowser = !!config.dev.autoOpenBrowser;
+
+// Define HTTP proxies to your custom API backend
+// https://github.com/chimurai/http-proxy-middleware
+var proxyTable = config.dev.proxyTable;
+
+var app = express();
+var compiler = webpack(webpackConfig)
