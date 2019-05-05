@@ -1,0 +1,71 @@
+Themes仓库下
+git add .
+git commit -m "注释"
+git push origin master:myj0922 //提交
+git pull origin myj0922:master //获取
+
+
+将本地当前所处分支和远程分支关联 git  branch --set-upstream-to=origin/myj0922
+git branch -vv（两个v），就能够看到本地分支跟踪的远程分支
+
+git remote -v 查看远程地址
+
+git checkout -b dev 新建并切换到本地分支
+
+
+git stash 将本地文件暂时弹出
+
+git pull 再更新
+
+git pull同时会将远程的代码和本地未修改之前的代码合并
+
+git stash pop将自己修改的和已经合并好的再次合并
+
+git add -A表示添加所有内容， git add . 表示添加新文件和编辑过的文件不包括删除的文件; git add -u 表示添加编辑或者删除的文件，不包括新添加的文件
+
+创建分支      git branch 分支名
+推送到远程    git push origin 分支名
+
+git pull时出现冲突 放弃本地修改，使远程库内容强制覆盖本地代码
+git fetch --all //只是下载代码到本地，不进行合并操作
+git reset --hard origin/master  //把HEAD指向最新下载的版本
+
+git clean的用法:https://blog.csdn.net/leon1741/article/details/54314565
+
+Unable to create 'E:/xxx/.git/index.lock': File exists
+解决方案：在.git同级目录，执行rm -f .git/index.lock    将文件删除即可提交成功
+
+删除文件夹及其下所有的文件 
+	1.git rm <文件夹名> -r -f
+	2.git commit -m "delete"
+	3.git push origin master
+
+删除HEAD分支 git push origin --delete HEAD
+
+
+Git 取消追踪某个文件
+$ git rm --cached <filename>
+如果是目录的话：
+$ git rm -r --cached <foldername>
+这个操作不会本地删除文件或文件夹
+
+
+回滚到指定的版本
+git reset --hard e377f60e28c8b84158
+强制提交
+git push -f origin 分支（如果设置了关联：git push -f）
+
+git删除远程分支：
+git push origin --delete 分支名
+git 删除本地分支：
+git branch -d 分支名
+
+/*window 命令*/
+ipconfig
+ping www.banch.com
+
+mkdir 创建文件夹
+rd 删除文件夹
+
+type nul>*.* 创建文件
+del  删除文件

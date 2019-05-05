@@ -9,7 +9,6 @@ app.get('/',function(req,res,next){
 		if(err){
 			return next(err);
 		}
-
 		var $ = cheerio.load(sres.text);
 		var items = [];
 		 $('#topic_list .topic_title').each(function (idx, element) {
