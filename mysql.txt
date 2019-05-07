@@ -1,0 +1,28 @@
+连接：
+      1、mysql管理人默认为root，没有设置密码则直接登录
+               mysql -h host -u root  -p 不用输入密码按回车自动进入
+      2、如果想设置mysql密码
+               mysqladmin -u root password 123456
+      3、如果你的root现在有密码了（123456），那么修改密码为abcdef的命令是：
+              mysqladmin -u root -p password abcdef
+ 退出：
+       QUIT 或者 Control+D
+
+
+
+navicat连接MySQL8.0出现2059错误
+
+在navicat链接mysql8以后的版本时，会出现2059的错误，这个错误出现的原因是在mysql8之前的版本中加密规则为mysql_native_password，
+而在mysql8以后的加密规则为caching_sha2_password。解决此问题有两种方法，一种是更新navicat驱动来解决此问题，一种是将mysql用户
+登录的加密规则修改为mysql_native_password。本文采用第二种方式。
+
+3.输入命令：第一条：?ALTER USER 'root'@'localhost' IDENTIFIED BY 'password' PASSWORD EXPIRE NEVER;
+
+ 第二条：?ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+
+注意此处的password为你的登陆密码，本人的操作为：
+
+第一条：?ALTER USER 'root'@'localhost' IDENTIFIED BY '123****' PASSWORD EXPIRE NEVER;
+
+第二条：?ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '123****';
+
