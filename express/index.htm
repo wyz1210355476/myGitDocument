@@ -11,4 +11,17 @@
 <input type="submit" value="上传文件" />
 </form>
 </body>
+<script>
+    var xhr = new XMLHttpRequest();
+    xhr.withCredentials = true;
+    xhr.open("get","http://1901085009.test-pool1-site.make.yun300.cn/manager/batchGoods/info/findGoodsByPage.do?page=1&pageSize=10",true);
+    // 'X-Requested-With': 'XMLHttpRequest' ,
+    
+    xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+    xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest')
+    xhr.send(null);
+    xhr.onreadystatechange = function(){
+        console.log(xhr);
+    }
+</script>
 </html>
