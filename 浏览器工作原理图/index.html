@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>spa</title>
+	<script src="vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<div v-for="(item,index) in b">
+			{{item}}
+			<input type="text" v-model="b[index]">
+		</div>
+		<button @click="clickme">Click me</button>
+		<div>
+			<span>{{myVal}}</span>
+			<input type="text" v-model="myVal">
+		</div>
+	</div>
+	
+</body>
+<script type="text/javascript">
+	var vm = new Vue({
+		el: '#app',
+		data: {
+			myVal:"something",
+			a: 1,
+			c: 2,
+			b: [1, 2, 3]
+		},
+		mounted(){
+			console.log("1")
+			this.a = 2;
+			this.c = 3;
+			// this.a = 3;
+		},
+		methods:{
+			// change(event,index){
+			// 	console.log(event)
+			// 	this.b.splice(index,1,event.target.value)
+			// },
+			clickme(){
+				this.b.push(4);
+				// console.log(this.b)
+			}
+		},
+		watch:{
+			a(val){
+				// alert(val)
+			},
+			c(val){
+				console.log(val)
+			}
+		}
+	});
+	
+	console.log(vm)
+	function groupByCommas(n) {
+    return n.toString().replace(/\B(?:(\d{3}){1,}(?!\d))/g, ",");
+}
+console.log(groupByCommas(12345678));
+	// var ary1 = [1,2,3,4,5];
+	// var ary2 = ary1.slice();
+	// console.log(ary1 == ary2) 
+
+	// let ary = [1,2,3,4,5,6];
+	// let obj = {
+	// 	name:"jack"
+	// }
+	// for(let index in ary){
+	// 	alert(index)
+	// }
+	// console.log(Object.prototype.toString.call(ary))
+	// console.log(typeof ary)
+	// console.log(typeof obj)
+
+	// console.log("$$123h".replace(/^\$\$/,""))
+
+	// var aryA = [2,4,6,8,10,17,18,21],
+	// 	aryB = [1,2,3,6,8,9,14,15,17,20,24],
+	// 	aryC = [];
+
+	// var lenA = aryA.length,lenB = aryB.length;
+	// var i = 0,
+	// 	j = 0,
+	//    	min;
+
+
+	// function sort(){
+	// 	if(aryA[i] < aryB[j]){
+	// 		min = aryA[i];
+	// 		i++;
+	// 	}else{
+	// 		min = aryB[j]
+	// 		j++
+	// 	}
+
+	// 	if(min != aryC[aryC.length-1]){
+	// 		aryC.push(min)
+	// 	}
+	// 	if(i == lenA){
+	// 		aryC = aryC.concat(aryB.slice(j))
+	// 	}else if(j == lenB){
+	// 		aryC = aryC.concat(aryA.slice(i))
+	// 	}else{
+	// 		sort()
+	// 	}
+	// }
+	// sort()
+	// console.log(aryC)
+	// var isGo = true;
+	// while(isGo){
+	// 	// debugger;
+	// 	if(aryA[i] < aryB[j]){
+	// 		min = aryA[i];
+	// 		i++;
+	// 	}else{
+	// 		min = aryB[j]
+	// 		j++
+	// 	}
+
+	// 	if(min != aryC[aryC.length-1]){
+	// 		aryC.push(min)
+	// 	}
+	// 	if(lenA == i){
+	// 		isGo = false;
+	// 		aryC = aryC.concat(aryB.slice(j))
+	// 	}else if(lenB == j){
+	// 		isGo = false;
+	// 		aryC = aryC.concat(aryA.slice(i))
+	// 	}
+	// }
+	// console.log(aryC)
+</script>
+</html>

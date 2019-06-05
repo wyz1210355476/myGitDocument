@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src='./vue.js'></script>
+</head>
+<body>
+	<h1>Mixins Option Demo</h1>
+    <hr>
+    <div id="app">
+        <p>num:{{ num }}</p>
+        <P><button @click="add">增加数量</button></P>
+        <button @click="check">{{number}}</button>
+    </div>
+ 
+    <script type="text/javascript">
+        //额外临时加入时，用于显示日志
+        var addLog={
+            updated:function(){
+            	debugger
+                console.log("数据放生变化,变化成"+this.num+".");
+            },
+            methods:{
+                check:function(){
+                    // var num
+                    console.log(this.number++)
+                }
+            },
+            data:{
+                number:1
+            }
+        }
+        var app=new Vue({
+            el:'#app',
+            data:{
+                num:1
+            },
+            methods:{
+                add:function(){
+                	debugger
+                    this.num++;
+                }
+            },
+            mixins:[addLog]//混入
+        })
+        console.log(app)
+    </script>
+</body>
+</html>

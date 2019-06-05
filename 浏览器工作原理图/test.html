@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+  <style>
+    .box{
+      height: 20px;
+      width: 100%;
+    }
+    .box[data-suibian]{
+      background-color: red
+    }
+  </style>
+</head>
+<body>
+	<div class="box" data-suibian></div>
+  <div class="box"></div>
+  <div class="box" data-suibian></div>
+</body>
+<script>
+// const s = new Set();
+
+// [2, 3, 5, 4, 5, 2, 2].forEach(x => s.add(x));
+// s.add("w")
+// for (let item of s.keys()) {
+//   console.log(item);
+// }
+// for (let item of s.entries()) {
+//   console.log(item);
+// }
+// console.log(s)
+// for (let i of s) {
+//   console.log(i);
+// }
+// var f = new Function('return 1');
+// console.log(f)
+
+// var st = Object.prototype.toString;
+
+// console.log(st.call([]));
+// var btnSucc = document.createElement("button");
+// var btnErr = document.createElement("button");
+// btnSucc.innerHTML = "Click me for success!";
+// btnErr.innerHTML = "Click me for error!";
+// btnSucc.onclick = function(){
+// 	promiseMethod('success').then(function(data){
+// 		console.log(data);
+// 	},function(err){
+// 		console.log(err)
+// 	})
+// };
+// btnErr.onclick = function(){
+// 	promiseMethod('error').then(function(data){
+// 		console.log(data);
+// 	},function(err){
+// 		console.log(err);
+// 	})
+// };
+
+// document.body.appendChild(btnSucc);
+// document.body.appendChild(btnErr);
+// function promiseMethod(status){
+// 	const promise = new Promise(function(resolve,reject){
+// 		console.log("1");
+// 		resolve("异步");
+// 		console.log("2");
+// 		// setTimeout(function(val){
+// 		// 	console.log(val)
+// 		// 	if(status === 'success'){
+// 		// 		resolve('You have clicked the success btn!')
+// 		// 		console.log("1")
+// 		// 	}else{
+// 		// 		reject('You have clicked the error btn!')
+// 		// 	}
+// 		// 	console.log("2")
+// 		// },3000,"done")
+// 	})
+// 	 console.log("3")
+// 	return promise;
+// }
+
+// function loadImageAsync(url){
+// 	return new Promise(function(resolve,reject){
+// 		const img = new Image();
+
+// 		img.onload = function(){
+// 			resolve(img);
+// 		}
+
+// 		img.onerror = function(){
+
+// 			reject(url);
+// 		}
+
+// 		img.src = url;
+// 	})
+// }
+
+// let urlRight = './ZCQJ6YP$@33H5@J26LYCLZY.png';
+// let urlError = './ZCQJ6YP$@33H5@J26LYCL.png';
+
+// // loadImageAsync(urlRight).then(function(data){
+// // 	console.log(data.height);
+// // });
+// // loadImageAsync(urlError).then(function(data){
+
+// // },function(error){
+// // 	new Error('Could not load image at ' + error);
+// // })
+
+// const getJSON = function(url){
+// 	const promise = new Promise(function(resolve,reject){
+// 		const handler = function(){
+// 			debugger;
+// 			if(this.readState !== 4){
+// 				return;
+// 			}
+// 			if(this.status === 200){
+// 				resolve(this.response);
+// 			}else{
+// 				reject(new Error(this.statusText));
+// 			}
+// 		};
+
+// 		const client = new XMLHttpRequest();
+// 		client.open("GET",url);
+// 		client.onreadystatechange = handler;
+// 		client.responseType = "json";
+// 		client.setRequestHeader("Accept","application/json");
+// 		client.send();
+// 	});
+
+// 	return promise;
+// }
+
+// // getJSON("./posts.json").then(function(json){
+// // 	console.log('Contents: '+ json);
+// // },function(error){
+// // 	console.error('出错了',error)
+// // })
+
+// function getPromise(status,time,num){
+// 	return new Promise(function(resolve,reject){
+// 		setTimeout(function(){
+// 			if(status == '200'){
+// 				resolve("Success"+num)
+// 			}else{
+// 				reject("Error"+num)
+// 			}
+// 		},time)
+// 	})
+// }
+// const promises = [1,2,3,4,5,6].map(function(item,index){
+// 	let status = item%5 !== 0 ?'200':"500",
+// 	time = item*1000;
+// 	return getPromise(status,time,item);
+// })
+
+// Promise.all(promises).then(function(data){
+// 	console.log(data)
+// }).catch(function(error){
+// 	console.log(error)
+// })
+
+// const p1 = new Promise((resolve, reject) => {
+//   resolve('hello');
+// })
+// .then(result => result)
+// .catch(e => e);
+
+// const p2 = new Promise((resolve, reject) => {
+//   throw new Error('报错了');
+// })
+// .then(result => result)
+// .catch((e) =>{
+// 	console.log(e);
+// 	return 'new error'
+// });
+
+// Promise.all([p1, p2])
+// .then(result => console.log(result))
+// .catch(e => console.log(e));
+
+// new Promise(function(resolve){
+// 	resolve("foo")
+// })
+
+// let thenable = {
+// 	then:function(resolve,reject){
+// 		resolve(42)
+// 	}
+// };
+// Promise.resolve(thenable).then(function(data){
+// 	console.log(data)
+// }).catch(function(error){
+// 	debugger
+// 	console.log(error)
+// })
+
+// setTimeout(function(){
+// 	console.log('0')
+// },0)
+// Promise.resolve("zero").then(data =>{
+// 	console.log(data)
+// })
+// let Ps = new Promise(function(resolve,reject){
+// 	console.log("1");
+// 	resolve("rr");
+// 	console.log("2")
+// });
+
+// Ps.then(function(data){
+// 	console.log("3")
+// });
+
+// console.log("4")
+
+function* helloWorldGenerator() {
+	console.log("kaishi")
+  // yield 'hello';
+  // yield 'world';
+  // // return 'ending';
+}
+
+var hw = helloWorldGenerator();
+
+console.log(hw.next())
+console.log(hw.next())
+console.log(hw.next())
+
+function* f() {
+  console.log('执行了！')
+}
+
+var generator = f();
+
+// setTimeout(function () {
+//   console.log(generator.next())
+//   generator.next()
+// }, 2000);
+
+function* f() {
+  for(var i = 0; true; i++) {
+  	// debugger
+    var reset = yield i;
+    // console.log(i)
+    if(reset) { i = -1; }
+  }
+}
+
+var g = f();
+
+console.log(g.next()) 
+console.log(g.next())
+
+console.log(g.next(true))
+console.log(g.next())
+
+
+
+var url = "http://1810175010.test-pool1-site.make.yun300.cn/login.html?t=1542771149814&callackUrl=http%3A%2F%2F1810175010.test-pool1-site.make.yun300.cn%2Fblank1.html%3Fid%3D67&DEBUGJS=TRUE&gotoUrl=http://10.12.40.10/secure/Dashboard.jspa"
+console.log(url.match(/(?:callBackUrl=|gotoUrl=|gw_front_backurl)([^&]+)(?:&|$)/));
+var url = "/blank21.html?";
+console.log(url.split("?"));
+</script>
+</html>

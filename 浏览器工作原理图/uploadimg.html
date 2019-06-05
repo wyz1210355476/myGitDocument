@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	.father{
+		width: 100vw;
+	    height: 100vh;
+	    background: rgba(0,0,0,0.5);
+	    z-index: 12;
+	    position: fixed;
+	    bottom: 0;
+	}
+		.box{
+			width: 70vw;
+			height: 18vh;
+			background: red;
+			position: absolute;
+			margin: auto;
+			top: 0;
+			bottom: 0;
+		}
+	</style>
+</head>
+<body>
+	<input type="file">
+	<div class="father">
+		<div class="box"></div>
+	</div>
+	<button>Click me</button>
+</body>
+<script>
+	var inputDom = document.querySelector('input');
+	var reader = new FileReader(),img = new Image();
+	reader.onload = function(e){
+		console.log(e)
+		img.src = e.target.result;
+		document.body.appendChild(img)
+	};
+	inputDom.addEventListener("change",function(e){
+		// console.log(e.target.files[0])
+		reader.readAsDataURL(e.target.files[0])
+	})
+
+	var btn = document.querySelector('button');
+	btn.addEventListener('click',function(){
+		history.pushState('{name:weiyongzhi}','',"https://www.baidu.com/");
+	})
+
+// var num = '13750854360';
+// 	var newnum = num.replace(/^(\d{3})\d{4}(\d{4})/,function(all,num1,num2){
+//             return num1+"****"+num2
+//         })
+// 	console.log(newnum)
+// 	var obj = {
+// 		name:"jack",
+// 		age:"12",
+// 		country:"America"
+// 	}
+// 	var reg = /{([a-zA-z]+)}/gi;
+//     var str = 'My name is {name},i an {age} years old,i am from {country}';
+//     var newstr = str.replace(reg, function (all,letter1,letter2,letter3,letter4) {
+//     	// debugger;
+//         console.log(all);
+//         console.log(letter1);
+//         console.log(letter2);
+//         console.log(letter3);
+//         console.log(letter4)
+
+//         return obj[letter1];
+//     });
+//     console.log(newstr);
+
+    // var reg = /((?<=\d)\d{3})+\b/g;
+    // var str = '1234567892';
+    // str.replace(reg,function(all,letter1,letter2){
+    // 	console.log(all);
+    // 	console.log(letter1);
+    // 	console.log(letter2)
+    // })
+    var n="1279834847944074100465236.33",
+    re=/(?=((\d{3})+($|\.)))/g;
+    var n1 = n.replace(re,",");
+    console.log(n1);
+    console.log(n.match(re))
+    // var n="1279834847944074100465236.33",
+    // re=/(\d{1,3}(\d{3})+($|\.))/g;
+    // // var n1 = n.replace(re,function(all,$1,$2){
+    // // 	console.log(all);
+    // // 	console.log($1);
+    // // 	console.log($2);
+    // // 	return $1+",";
+    // // });
+    // console.log(n.match(re));
+    var str = "I'm singing while you're dancing";
+    var reg = /[a-zA-z]+(?=ing)/;
+    console.log(str.match(reg))
+
+    var num = "234567890";
+    var reg = /(?<=(\d))\d{2}/g;
+    console.log(num.match(reg))
+
+
+    var str = "45#7w@";
+    var reg = /^(?![0-9]+$)(?![a-zA-Z]+$)([\da-zA-Z]{1,}$)/;
+    console.log(str.match(reg))
+
+    var regN = /^(?!45$)/;
+    console.log(str.match(regN));
+    console.log(str.indexOf("8"));
+
+    var reg = /\d{1,3}(?=(\d{3})+($|\.))/g;
+    var n1 = n.replace(reg,function(all,$1,$2,$3,$4){
+    	console.log(all);
+    	console.log($1);
+    	console.log($2);
+    	console.log($3);
+    	return all+",";
+    });
+    console.log(n1);
+
+    var num = "13750854360";
+    var reg = /(?<=\d{3})(\d{4})/;
+ 	console.log(num.match(reg))
+ 	// console.log(reg.exec(num))
+ 	// console.log(reg.exec(num))
+ 	console.log(RegExp.$1)
+    console.log(num.replace(reg,"****"))
+</script>
+</html>
