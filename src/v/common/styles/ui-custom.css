@@ -1,0 +1,108 @@
+/*订单*/
+.order-form {margin-bottom: 32px;}
+.order-form .el-table {font-size: 12px;}
+.order-form .el-form-item__label {font-size: 12px;}
+.order-form .el-form-item .el-input__inner,
+.order-form .el-form-item .el-textarea__inner{max-width: 300px;}
+.order-form .el-form-item.info-block .el-input__inner,
+.order-form .el-form-item.info-block .el-textarea__inner{max-width: 450px;}
+.order-form .order-info {margin-bottom: 15px; font-size: 12px;}
+.order-form .info-title {font-size: 12px; text-align: left; padding-left: 10px; color: #606266;}
+.order-form .info-left,
+.order-form .info-right {display: inline-block; vertical-align: top; margin-bottom: 20px; font-size: 12px;}
+.order-form .info-inline {margin-bottom: 20px; font-size: 12px;}
+.order-form .infos {color: #666; font-size: 12px;}
+.order-form .info {color: #48576a; line-height: 36px;}
+.order-form .infos .info {color: #666;}
+.order-form .infos .info.multi-line {height: auto; word-break: break-all;}
+.order-form .info-inline .info,
+.order-form .info-inline .el-form-item {display: inline-block; vertical-align: top; width: 49%;}
+.order-form .info-inline .info.info-block,
+.order-form .info-inline .el-form-item.info-block {display: block; width: 100%;}
+.order-form .info-label {display: inline-block; text-align: right; width: 100px; box-sizing: border-box; vertical-align: top; padding-right: 12px;}
+.order-form .info-value {display: inline-block; vertical-align: top; width: calc(100% - 110px); margin-bottom: 0;}
+.order-form .info-value.info-oneline {white-space: nowrap; text-overflow: ellipsis; overflow: hidden;}
+.order-form .info.multi-line .info-label {vertical-align: top;}
+.order-form .info.multi-line .info-value {width: calc(100% - 150px); vertical-align: top;}
+/*.order-form .info-order-inline .info-inline .info {max-width: 250px;}*/
+.order-form .info-order-inline .info-inline {max-width: 600px;}
+.order-form .info-order-inline .info-label {width: auto; padding-right: 5px; color: #999;}
+/*.order-form .infos .el-form-item__content {margin-left: 0 !important;}*/
+.order-form .el-radio-button__inner {font-size: 12px; padding: 8px 10px;}
+.order-form .el-radio__label {font-size: 12px;}
+.order-form .radio-info {line-height: 34px; margin-left: 5px; font-size: 12px; display: inline-block;}
+.order-form .btn-add-adress {font-size: 12px; margin-left: 10px;}
+.order-form .btn-show-address {font-size: 12px; display: block;}
+.order-form .btn-show-address.grey {color: #777;}
+
+.address-area .address {border-radius: 2px; padding: 0 10px; display: block;}
+.address-area .address-btn-area {display: none; margin-left: 50px;}
+.address-area .address:hover {background: #fdece2;}
+.address-area .address:hover .address-btn-area {display: inline-block; vertical-align: bottom;}
+
+.order-sum-box {border: 1px solid #cbd9ed; background: #eff0fc; padding: 10px; margin: 10px 20px 10px 0; overflow: hidden;}
+.order-sum-box .order-sums {width: 250px; float: right;}
+.order-sum-box .sum {line-height: 30px;}
+
+.btn-area {text-align: right; margin-top: 10px;}
+.btn-area.center {text-align: center;}
+.btn-area.left {text-align: left; padding-left: 150px;}
+.btn-area.bottom {position: absolute; bottom: 0; width: calc(100% - 40px); background: #fff; padding-bottom: 10px; z-index: 9;}
+
+/*.window-order-form {font-size: 12px;}*/
+/*.window-order-form .order-form .el-form-item__content {width: 300px;}*/
+.order-form .table-item .el-form-item__content {width: auto; margin-left: 0 !important;}
+.order-form .table-item .el-input__inner { width: 80px; }
+
+.remark-list {padding: 15px; display: block; margin: 0; list-style: none; background: #f2f6fc; margin-top: 10px; max-height: 115px; overflow: auto;}
+.remark-list li {line-height: 26px; overflow: hidden; box-sizing: border-box; font-size: 12px; color: #999; line-height: 25px; word-break: break-all;}
+.remark-list li span {margin-right: 5px;}
+
+.order-form .message {border: 1px solid #ccc;}
+.order-form .message-top {background: #f1f1f1; border-bottom: 1px solid #ccc; overflow: hidden;}
+
+.order-form .service-detail {padding: 10px; border: 1px solid #cbd9ed; background: #eff0fc; line-height: 26px; overflow: hidden;}
+.order-form .service-detail img {width: 80px; height: 80px; border: 1px solid #ccc; vertical-align: top; margin-right: 20px;}
+
+.item-input-inline .el-input {width: 300px !important; margin-right: 10px;}
+.item-input-inline .el-checkbox__label {font-size: 12px;}
+.item-remark .el-input {width: 300px; margin-right: 5px;}
+.item-message .el-input {width: 300px; margin-right: 5px;}
+.item-derate-expenses {margin-bottom: 0 !important;}
+.item-derate-expenses .el-input {width: 100px;}
+.item-dropdown-select .el-select .el-select__tags-text {display: inline-block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 230px; vertical-align: bottom;}
+.item-dropdown-option {width: 300px;}
+.item-dropdown-option.el-select-dropdown.is-multiple .el-select-dropdown__item.selected {padding-right: 35px;}
+.item-input-tag .el-input__icon {display: none;}
+.item-input-tag .el-input__inner {cursor: text;}
+.item-input-tag .el-select__tags {max-width: none !important;}
+.item-input-tag-dropdown {display: none;}
+.item-relative .el-form-item__content {max-width: 300px;}
+.item-relative .el-input__inner {padding-right: 25px;}
+.item-multi-input .el-input,
+.item-multi-input .el-select {display: inline-block; vertical-align: middle;}
+.item-multi-input .el-select {width: 150px;}
+.item-multi-input .el-select .el-input {width: 150px;}
+.item-multi-input .el-input {width: 210px;}
+
+.radio-order .el-radio__input {display: none;}
+.radio-order .el-radio__label {padding-left: 0;}
+.radio-order .el-radio.is-bordered {border-radius: 2px; padding: 8px 10px 0 10px; margin-right: 10px; margin-bottom: 10px;}
+.radio-order .el-radio.is-bordered+.el-radio.is-bordered {margin-left: 0;}
+
+.table-operation-dropdown .el-dropdown-menu__item {padding: 0;}
+.table-operation-dropdown .el-dropdown-menu__item .el-button {padding: 0 20px; width: 100%; height: 100%; line-height: inherit;}
+.table-operation span .el-button {margin-left: 10px;}
+.table-one-line.el-table .cell {display: inline-block; vertical-align: middle; width: 100%;}
+.table-one-line.el-table .cell .one-line {overflow: hidden; text-overflow: ellipsis; white-space: nowrap; word-break: break-all;}
+.table-one-line.el-table .cell{text-overflow: clip;}
+
+.custom-dialog .el-dialog__body {height: 500px; overflow: auto; }
+
+.error-text-nowrap .el-form-item__error {
+    white-space: nowrap;
+}
+
+
+
+
