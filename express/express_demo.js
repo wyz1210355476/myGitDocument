@@ -14,28 +14,28 @@ app.get('/index.htm', function (req, res) {
 })
  
 app.post('/file_upload', function (req, res) {
-   console.log(req.files[0]);
+   console.log(req.body);
 
-   var des_file = __dirname + "/" + req.files[0].originalname;
-   fs.readFile(req.files[0].path,function(err,data){
-      fs.writeFile(des_file,data,function (err) { 
-         if(err){
-            console.log(err)
-         }else{
-            response = {
-               message:"File uploaded successfully",
-               filename:req.files[0].originalname
-            }
-         }
-         console.log(response);
-         res.end(JSON.stringify(response))
-       });
-   })
+   // var des_file = __dirname + "/public/" + req.files[0].originalname;
+   // fs.readFile(req.files[0].path,function(err,data){
+   //    fs.writeFile(des_file,data,function (err) { 
+   //       if(err){
+   //          console.log(err)
+   //       }else{
+   //          response = {
+   //             message:"File uploaded successfully",
+   //             filename:req.files[0].originalname
+   //          }
+   //       }
+   //       console.log(response);
+   //       res.end(JSON.stringify(response))
+   //     });
+   // })
 
-   
+   res.end('1s')
 })
  
-var server = app.listen(8080, function () {
+var server = app.listen(8083, function () {
  
   var host = server.address().address
   var port = server.address().port

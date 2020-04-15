@@ -42,9 +42,10 @@ module.exports = (function(){
             var hasExt = true;
             var requestUrl = request.url;
             var pathName = url.parse(requestUrl).pathname;
-
+            console.log("路径全：" + requestUrl)
             //对请求的路径进行解码，防止中文乱码
             pathName = decodeURI(pathName);
+            console.log("路径：" + path.extname(pathName))
 
             //如果路径中没有扩展名
             if(path.extname(pathName) === ''){
@@ -127,7 +128,7 @@ module.exports = (function(){
         ///配置信息
         config:{
             port:8808,
-            ip:'172.22.134.3',
+            ip:'172.22.151.26',
             mime:{
                 html:"text/html",
                 js:"text/javascript",

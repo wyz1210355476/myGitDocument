@@ -6,6 +6,7 @@
 <h3>文件上传：</h3>
 选择一个文件上传: <br />
 <form action="/file_upload" method="post" enctype="multipart/form-data">
+    <img src="" alt="">
 <input type="file" name="image" size="50" />
 <br />
 <input type="submit" value="上传文件" />
@@ -14,14 +15,39 @@
 <script>
     var xhr = new XMLHttpRequest();
     xhr.withCredentials = true;
-    xhr.open("get","http://1901085009.test-pool1-site.make.yun300.cn/manager/batchGoods/info/findGoodsByPage.do?page=1&pageSize=10",true);
+    xhr.open("post","/file_upload",true);
     // 'X-Requested-With': 'XMLHttpRequest' ,
     
     xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
     xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest')
-    xhr.send(null);
+    xhr.send('code=ff&markName=ff&des=ff');
     xhr.onreadystatechange = function(){
         console.log(xhr);
+
     }
+
+    function loadImg(me) {
+            let img = document.querySelector('img');
+            let cvs = document.querySelector('canvas');
+            let file = me.files[0];    //  获取到文件对象
+            //  上传的图片大于 500KB 时才压缩
+            if (file && (file.size / 1024 > 500)) {
+                let reader = new FileReader();
+                reader.readAsDataURL(file);     //  转成 base64 编码
+                reader.onload = function (e) {
+                    let naturalBase64 = e.target.result;    //  获取 base64 编码，这是原图的
+                    img.src = naturalBase64;
+                    img.onload = function () {
+                        let ratio = img.naturalWidth / img.naturalHeight; //  获取原图比例,为了等比压缩
+                        cvs.width = 400;
+                        cvs.height = cvs.width / ratio;
+                        let ctx = cvs.getContext('2d');
+                        ctx.drawImage(img, 0, 0, cvs.width, cvs.height);    //  画在 canvas 上
+                        // 压缩后新图的 base64
+                        let zipBase64 = cvs.toDataURL();
+                    }
+                }
+            }
+        }
 </script>
 </html>

@@ -30,7 +30,7 @@ http.createServer( function (request, response) {
    //    response.end();
    // });   
    response.end("hello world");
-}).listen(8081);
+}).listen(8082);
 
 // 控制台会输出以下信息
-console.log('Server running at http://127.0.0.1:8081/');
+console.log('Server running at http://127.0.0.1:8082/');

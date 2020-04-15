@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+let f = (f1,f2) => {
+    console.log(args)
+}
+// f(2,3)
+const add =function (x, y){ 
+    debugger
+    return x + y;
+} 
+const square = function (z){
+    debugger
+    return z * z;
+}
+
+
+const compose = (fn1, fn2) => (...args) => fn2(fn1(...args))
+
+// const compose = (...[first,...other]) => (...args) => {
+//     let ret = first(...args)
+//     other.forEach(fn => {
+//         ret = fn(ret)
+//     })
+//     return ret
+// }
+let com = function (fn1,fn2) { 
+    debugger
+    return function (...args) { 
+        console.log(args)
+        debugger
+        return fn2(fn1(...args))
+    }
+ }
+
+const fn = com(add, square)
+
+// const fn = (x, y) => square(add(x, y))
+console.log(fn(1, 2))
+
+
+
+let fb = function (x,y) { 
+    console.log(x,y)
+}
+fb(...[2,3])
+</script>
+</html>
