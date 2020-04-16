@@ -1,2 +1,4 @@
 一：浏览器工作原理
 1：https://blog.csdn.net/xiaozhuxmen/article/details/52014901
+二：深入理解javascript
+1：https://www.cnblogs.com/TomXu/archive/2011/12/15/2288411.html
