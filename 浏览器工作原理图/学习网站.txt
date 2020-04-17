@@ -9,3 +9,7 @@ https://zhuanlan.zhihu.com/p/128625669
 四：垃圾回收
 1分代回收：https://segmentfault.com/a/1190000018605776?utm_source=tag-newest
 2标记清除算法：https://baijiahao.baidu.com/s?id=1642227403103069193&wfr=spider&for=pc
+五：webpack
+1工作原理：
+https://segmentfault.com/a/1190000021494964?utm_source=tag-newest
+https://zhuanlan.zhihu.com/p/93655022
