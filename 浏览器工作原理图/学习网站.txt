@@ -12,3 +12,13 @@ https://zhuanlan.zhihu.com/p/128625669
 
 五：负载均衡
 1：https://baijiahao.baidu.com/s?id=1634386941492502616&wfr=spider&for=pc
+
+六：前端性能监控
+1：https://www.cnblogs.com/dayiran1222/p/8745846.html
+2：https://www.cnblogs.com/chuaWeb/p/PerformanceMonitoring.html
+3：https://blog.csdn.net/sinat_17775997/article/details/88301120
+
+七：前端安全
+1：https://mp.weixin.qq.com/s?__biz=MzU0OTExNzYwNg==&mid=2247483770&idx=1&sn=4f2247fdf7e1de9d8c45539c09751ba4&chksm=fbb58ab3ccc203a50abf225bdf6db56d10f5b0030cb9f333b245ebb95f8c440673901f7d6c23&scene=0&key=fa42caa90050da31b592ae39c69d6a1b3e66f3f8e70c7637b0a0e49da856aacfa738d408a030d1f8ca6cca0fd2b24f65b37a78803337511bed9c451546b3b59a4970d81068c5ddac33e7e20e76326825&ascene=0&uin=MjIxODIxNjA0MA%3D%3D&devicetype=iMac+MacBookPro12%2C1+OSX+OSX+10.11.6+build(15G1004)&version=12010110&nettype=WIFI&fontScale=100&pass_ticket=esQi%2BQQIY1nf6pamadBaSglzZVEnePUYJqF8QtyLT5RfBQ9ZpN5ZUaVnhstT2RzX
+2：https://blog.csdn.net/github_38885296/article/details/78679104
+3：会话劫持：https://www.cnblogs.com/phpstudy2015-6/p/6777615.html
