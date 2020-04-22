@@ -24,7 +24,7 @@ https://zhuanlan.zhihu.com/p/128625669
 3：会话劫持：https://www.cnblogs.com/phpstudy2015-6/p/6777615.html
 4：加密（对称和非对称加密）：https://zhidao.baidu.com/question/163920413.html
 5：https：https://www.jianshu.com/p/b0411fc13a67
-6：http断点续传：https://www.cnblogs.com/findumars/p/5745345.html
+6：http断点续传：https://www.cnblogs.com/findumars/p/5745345.html  https://www.jianshu.com/p/012c8a4dc661
 
 八：正则表达式
 1：https://deerchao.cn/tutorials/regex/regex.htm
