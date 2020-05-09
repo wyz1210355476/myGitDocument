@@ -32,3 +32,6 @@ https://zhuanlan.zhihu.com/p/128625669
 九：js设计模式
 1观察者模式核心：https://www.jianshu.com/p/ccd893c84424
 2发布订阅和观察者模式的区别：https://www.jianshu.com/p/f0f22398d25d
+
+十：vue router
+1.https://www.jianshu.com/p/4295aec31302
