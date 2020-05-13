@@ -35,3 +35,4 @@ https://zhuanlan.zhihu.com/p/128625669
 
 Ê®£ºvue router
 1.https://www.jianshu.com/p/4295aec31302
+2.https://segmentfault.com/a/1190000015123061?utm_source=tag-newest
