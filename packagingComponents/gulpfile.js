@@ -1,11 +1,10 @@
-var equipment = process.env.equipment;
-var folderName = process.env.folderName;
+var buildRouter = process.env.buildRouter;
 var gulp = require('gulp');
 var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
 gulp.task('jsmin',function(){
-    gulp.src(["D:/dir/"+equipment+"/c_"+folderName+"-01001/*.js","!D:/dir/"+equipment+"/c_"+folderName+"-01001/*min.js"])
+    gulp.src([buildRouter+"-01001/*.js","!"+buildRouter+"-01001/*min.js"])
     .pipe(rename({ suffix: '.min' }))
     .pipe(uglify())
-    .pipe(gulp.dest("D:/dir/"+equipment+"/c_"+folderName+"-01001/"))
+    .pipe(gulp.dest(buildRouter+"-01001/"))
 });

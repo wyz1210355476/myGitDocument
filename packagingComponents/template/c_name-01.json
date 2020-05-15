@@ -1,0 +1,72 @@
+{
+    "dialogName": "{{dialogName}}",
+    "dialogData": [{
+            "display": "borderStyleGroup"
+        },
+        {
+            "display": "tabGroup",
+            "titles": [
+                "基础项",
+                "交互项"
+            ],
+            "contains": [
+                [
+                    {
+                        "display": "switch",
+                        "cnName": "{{cnName}}",
+                        "showSwitch": "true",
+                        "name": "prop.commentBtn",
+                        "isNoFirst": "true",
+                        "contains": []
+                    },{
+                        "cnName": "{{cnName}}链接",
+                        "name": "prop.linkToFlag",
+                        "isNoFirst": "true",
+                        "display": "expandSwitchGroup",
+                        "showSwitch": "true",
+                        "contains": [{
+                            "cnName": "链接",
+                            "display": "linkTo",
+                            "isNoFirst": "true",
+                            "name": "prop.goods_linkToUrl.content.text",
+                            "openType": "prop.goods_linkToUrl.target"
+                        }]
+                    }
+                ],
+                [{
+                    "display": "formGroup",
+                    "isNoFirst": "true",
+                    "contains": [{
+                        "display": "responseAnimate"
+                    }]
+                }]
+            ]
+        }
+    ],
+    "cssItems": [{
+            "selectorId": "003",
+            "selector": ".p_articles",
+            "propName": "margin"
+        },
+        {
+            "selectorId": "004",
+            "selector": ".p_articles",
+            "propName": "margin_top"
+        },
+        {
+            "selectorId": "005",
+            "selector": ".p_articles",
+            "propName": "margin_right"
+        },
+        {
+            "selectorId": "006",
+            "selector": ".p_articles",
+            "propName": "margin_bottom"
+        },
+        {
+            "selectorId": "007",
+            "selector": ".p_articles",
+            "propName": "margin_left"
+        }
+    ]
+}

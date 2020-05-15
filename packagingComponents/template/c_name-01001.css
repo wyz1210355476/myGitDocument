@@ -1,0 +1,15 @@
+/* pc 端样式 begin */
+@media only screen and (min-width: 769px) {
+  .{{parentScope}} .mo{
+    display: none;
+  }
+}
+/* pc 端样式 end */
+
+/* mo 端样式 begin */
+@media only screen and (max-width: 768px) {
+  .{{parentScope}} .pc{
+    display: none;
+  }
+}
+/* mo 端样式 begin */

@@ -1,0 +1,23 @@
+#border
+<div>
+
+</div>
+<script type="text/javascript">
+	$comp({
+		_params: {
+			orderList: "",
+			"extends_flag": "${compConfig.extends_flag}",
+		},
+		pageParam: {
+			pre:"上",
+			next:"下",
+			firstRefresh:true,//首次是否加载
+			data:{contentReq:true},//参数，可自定义
+			url:"$pageUrl", 
+			turnPageType:"$!compConfig.turnPageType"//turnPage-翻页，hidden-隐藏， rollingLoad-滚动加载 marqueeLoad -走马灯
+		},
+		id: "${compConfig.compId}", //实例id 服务器传
+		lib: ["js/{{viewPath}}"], //组件js 
+	});
+</script>
+#borderEnd

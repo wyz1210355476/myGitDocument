@@ -1,0 +1,18 @@
+﻿使用前准备工作：
+node 版本 10以内
+第一步 全局安装gulp（安装过的忽略）
+    npm install gulp -g
+
+第二部 安装依赖（安装过的忽略）
+cnpm install
+
+
+使用说明：
+
+先配置config.js文件，配置说明详见config.js文件
+
+node create   命令根据配置生成组件文件，并派发到git工作目录下的相应位置
+
+node build    命令生成可直接上传的压缩包
+
+
